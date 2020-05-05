@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+
+.App{
+  margin: auto;
+  /* border: 2px solid blue; */
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homeBackground{
+  /* border: 5px solid palevioletred; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body::-webkit-scrollbar-track
+{
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
+    -webkit-box-shadow: inset 0 0 5rem #BCE5B9;
+    /* background-color: #F5F5F5; */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body::-webkit-scrollbar
+{
+    width: 6px;
+    background-color: #BCE5B9;
 }
+
+body::-webkit-scrollbar-thumb
+{
+    background-color: #BCE5B9;
+}
+
+h1{
+  text-align: center;
+  font-size: 3rem;
+  font-family: 'Gruppo', cursive;
+}
+
+h2{
+  font-family: 'Gruppo', cursive;
+}
+
+h3, h4, h5, h6 {
+  font-family: 'Gruppo', cursive;
+}
+
+p{
+  font-family: 'Baloo 2', cursive;
+}
+
+a{
+  font-family: 'Baloo 2', cursive;
+}
+
+button{
+  cursor: pointer;
+  border: 1px solid #134818;
+  border-radius: 1rem;
+  background-color: #BCE5B9;
+}
+
