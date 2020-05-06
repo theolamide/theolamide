@@ -1,5 +1,6 @@
 import MerchDropperCover from '../Images/DevPortfolioGallery/MerchDropperCover.JPG';
-import CainAfrica from '../Images/DevPortfolioGallery/CainAfrica.JPG'
+import HowFinderCover from '../Images/DevPortfolioGallery/HowFinderCover.JPG';
+import CainAfrica from '../Images/DevPortfolioGallery/CainAfrica.JPG';
 
 import Akolade1 from '../Images/PhotoPortfolioGallery/Akolade1.jpg'
 import Avatar1 from '../Images/PhotoPortfolioGallery/Avatar1.jpg'
@@ -40,6 +41,14 @@ export const PortfolioData = [
     },
     {
         index: 2,    //These should be incremental from the last interger
+        title: "howfinder",
+        cover: `${HowFinderCover}`,
+        description: "This app is a social media type app that indexes how to solve a lot of problems. It will work like a directory where users can search for specific things they want to learn about. It could be anything from `How do I learn how to tie a bow?`  to  `How do I sign up for going to space?`",
+        technologies: ["ReactJS", "NodeJS", "Express", "axios", "Formik", "styled-components"],
+        link: "https://howfinder.now.sh/#/"
+    },
+    {
+        index: 3,    //These should be incremental from the last interger
         title: "CAIN Africa",
         cover: `${CainAfrica}`,
         description: "A fully responsive informational website for a non profit focused on Education and Healthcare for the less priviledged in Africa. Website must haves included donataions and forms handling, blogging capability, and gallery carousel. Paypal, and paystack were used to handle collections of monnies, external API call was made to the organizations Medium page to to display blog posts, and React Grid Library for image gallery.",
