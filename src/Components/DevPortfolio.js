@@ -50,13 +50,14 @@ const DevPortfolio = (props) => {
 export default DevPortfolio;
 
 const RootWrapper = styled.div`
-    height: 96%;
+    height: 100%;
+    // border: 1px solid black;
 `
 
 const MapWrapper = styled.div`
     margin: 0 auto;
     width: 95%;
-    height: 85%;
+    height: 90%;
     overflow: scroll;
         &::-webkit-scrollbar
             {
