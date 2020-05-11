@@ -100,7 +100,7 @@ const Titles = styled.h2`
     margin-bottom: 6rem;
     color: #0E4416;
     text-align: center;
-    background: #E0FCDE;
+    // background: #E0FCDE;
     // border: 1px solid black;
 
     @media (max-width: 414px) {
