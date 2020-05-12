@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Footer from './footer';
 
 import LogoandHam from './LogoAndHam';
 import PhotoSilder from './PhotoSlider'
@@ -14,6 +15,7 @@ const PhotoPortfolio = (props) => {
             <MainContent>
                 <PhotoSilder />
             </MainContent>
+            <Footer />
         </RootWrapper>
     )
 }
@@ -27,7 +29,7 @@ const MainContent = styled.div`
     margin: auto;
     margin-top: 1rem;
     width: 95%;
-    height: 89%;
+    height: 82%;
     display: flex;
     justify-content: space-between;
     // border: 1px solid black;
@@ -46,5 +48,6 @@ const MainContent = styled.div`
     @media (max-width: 414px) {
         flex-direction: column;
         height: 85%;
+        margin-bottom: 1.5rem;
     }
 `

@@ -13,7 +13,7 @@ const PhotoSlider = () => {
             <Car showArrows={true} autoPlay={true} infiniteLoop={true}>
                 {PhotoRoll.map(photos => (
                     <div>
-                        <img src={photos.src} />
+                        <img src={photos.src} alt={photos.caption} />
                         <p className="legend">{photos.caption}</p>
                     </div>
                 ))}

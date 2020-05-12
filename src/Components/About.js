@@ -1,7 +1,7 @@
 import React from 'react';
 import LogoandHam from './LogoAndHam';
 import styled from 'styled-components';
-import PhotoPortfolio from './PhotoPortfolio';
+import Footer from './footer';
 
 import Profile from '../Images/About/Profile.jpg';
 
@@ -21,6 +21,7 @@ const About = (props) => {
                 </AboutWrapper>
                 <ProfileImage src={Profile} alt="profile image" />
             </MainContent>
+            <Footer />
         </RootWrapper>
     )
 }
@@ -87,7 +88,7 @@ const MainContent = styled.div`
     margin: auto;
     margin-top: 2rem;
     width: 95%;
-    height: 80%;
+    height: 77%;
     display: flex;
     justify-content: space-between;
     // border: 1px solid black;
@@ -107,5 +108,6 @@ const MainContent = styled.div`
         margin-top: 1rem;
         flex-direction: column;
         height: 85%;
+        margin-bottom: 1.5rem;
     }
 `

@@ -1,5 +1,6 @@
 import React from 'react';
 import LogoandHam from './LogoAndHam';
+import Footer from './footer';
 import styled from 'styled-components';
 import Logo from '../Images/Logo.png';
 
@@ -13,7 +14,6 @@ const Home = (props) => {
         <RootWrapper>
             <LogoandHam drawerToggleClickHandler={props.drawerToggleClickHandler} />
 
-
             <MainContent>
 
                 <TitlesWrapper>
@@ -24,6 +24,7 @@ const Home = (props) => {
                 <MainContentLogo src={Logo} />
 
             </MainContent>
+            <Footer />
         </RootWrapper>
 
     )
@@ -55,8 +56,9 @@ const MainContent = styled.div`
         @media (max-width: 414px) {
             margin-top: 1rem;
             justify-content: center;
-            height: 80vh;
+            height: 82%;
             flex-direction: column-reverse;
+            margin-bottom: 1.5rem;
         }
 `
 const TitlesWrapper = styled.div`
