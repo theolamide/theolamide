@@ -48,5 +48,6 @@ const MainContent = styled.div`
     @media (max-width: 414px) {
         flex-direction: column;
         height: 85%;
+        margin-bottom: 1.5rem;
     }
 `

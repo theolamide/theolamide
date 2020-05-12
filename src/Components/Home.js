@@ -56,8 +56,9 @@ const MainContent = styled.div`
         @media (max-width: 414px) {
             margin-top: 1rem;
             justify-content: center;
-            height: 80vh;
+            height: 82%;
             flex-direction: column-reverse;
+            margin-bottom: 1.5rem;
         }
 `
 const TitlesWrapper = styled.div`

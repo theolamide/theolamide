@@ -14,8 +14,9 @@ const FooterBox = styled.div`
     justify-content: center;
     align-items: center;
     // border: 1px solid black;
+    // position: fixed;
         @media (max-width: 768px) {
-            height: 30rem;
+            height: 0rem;
             flex-direction: column;
         }
 `
@@ -26,6 +27,7 @@ const LogoBox = styled.div`
     color: white;
         @media (max-width: 768px) {
             margin: 0 auto;
+            padding-bottom: 0.5rem;
             width:100%;
         }
 `

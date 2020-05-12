@@ -57,7 +57,7 @@ const RootWrapper = styled.div`
     height: 100%;
     border: 0px solid black;
     margin: 0;
-    // border: 1px solid black;
+    border: 1px solid black;
 `
 
 const MapWrapper = styled.div`
@@ -65,6 +65,7 @@ const MapWrapper = styled.div`
     width: 100%;
     height: 80%;
     // height: 70vh;
+    // border: 1px solid black;
     overflow: scroll;
         &::-webkit-scrollbar
             {
@@ -78,6 +79,10 @@ const MapWrapper = styled.div`
                 background-color: #134818;
                 border-radius: 0.05rem;
             }
+            @media (max-width: 768px) {
+            height: 84%;
+            margin-bottom: 1.5rem;
+        }
 `
 
 const ProjectWrapper = styled.div`

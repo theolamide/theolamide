@@ -108,5 +108,6 @@ const MainContent = styled.div`
         margin-top: 1rem;
         flex-direction: column;
         height: 85%;
+        margin-bottom: 1.5rem;
     }
 `
