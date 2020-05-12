@@ -10,7 +10,6 @@ const FooterBox = styled.div`
     text-align:center;
     // background: #E0FCDE;
     background: none;
-    padding-top: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
