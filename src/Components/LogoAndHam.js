@@ -30,9 +30,9 @@ const TopContainer = styled.div`
     margin: 0 auto;
     padding: 0 2rem;
     padding-top: 1rem;
-    -webkit-box-shadow: 0px 2px 15px 0px rgba(19,72,24,0.42);
-    -moz-box-shadow: 0px 2px 15px 0px rgba(19,72,24,0.42);
-    box-shadow: 0px 2px 15px 0px rgba(19,72,24,0.42);
+    // -webkit-box-shadow: 0px 2px 15px 0px rgba(19,72,24,0.42);
+    // -moz-box-shadow: 0px 2px 15px 0px rgba(19,72,24,0.42);
+    // box-shadow: 0px 2px 15px 0px rgba(19,72,24,0.42);
             @media (max-width: 414px) {
                             width: 95%;
                             padding: 0 0.6rem;

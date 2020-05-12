@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Footer from './footer';
 
 import LogoandHam from './LogoAndHam';
 import PhotoSilder from './PhotoSlider'
@@ -14,6 +15,7 @@ const PhotoPortfolio = (props) => {
             <MainContent>
                 <PhotoSilder />
             </MainContent>
+            <Footer />
         </RootWrapper>
     )
 }

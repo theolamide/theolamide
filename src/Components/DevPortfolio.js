@@ -1,5 +1,6 @@
 import React from 'react';
 import LogoandHam from './LogoAndHam';
+import Footer from './footer';
 import styled from 'styled-components';
 
 import { PortfolioData } from './PortfolioData.js'
@@ -43,6 +44,8 @@ const DevPortfolio = (props) => {
                 ))}
             </MapWrapper>
 
+            <Footer />
+
         </RootWrapper>
     )
 }
@@ -50,14 +53,18 @@ const DevPortfolio = (props) => {
 export default DevPortfolio;
 
 const RootWrapper = styled.div`
+    width: 100%;
     height: 100%;
+    border: 0px solid black;
+    margin: 0;
     // border: 1px solid black;
 `
 
 const MapWrapper = styled.div`
     margin: 0 auto;
-    width: 95%;
-    height: 90%;
+    width: 100%;
+    height: 80%;
+    // height: 70vh;
     overflow: scroll;
         &::-webkit-scrollbar
             {
@@ -65,7 +72,6 @@ const MapWrapper = styled.div`
                 height: 0px;
                 background-color: #E0FCDE;
                 border-radius: 0.05rem;
-
             } 
         &::-webkit-scrollbar-thumb
             {
