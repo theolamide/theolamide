@@ -57,7 +57,7 @@ const RootWrapper = styled.div`
     height: 100%;
     border: 0px solid black;
     margin: 0;
-    border: 1px solid black;
+    // border: 1px solid black;
 `
 
 const MapWrapper = styled.div`
