@@ -7,7 +7,6 @@ import { PortfolioData } from './PortfolioData.js'
 
 const DevPortfolio = (props) => {
 
-
     return (
         <RootWrapper>
             <LogoandHam drawerToggleClickHandler={props.drawerToggleClickHandler} />
@@ -35,6 +34,15 @@ const DevPortfolio = (props) => {
                                             View Project
                                         </button>
                                     </a>
+                                    {/* Render repository link conditionally depending on wether it is private/proprietary or not */}
+                                    {project.github === "Private" ? <p>Private Repository</p> :
+                                        <a href={project.github} target="_blank" rel="noopener noreferrer" style={{ margin: "auto" }} >
+                                            <button className="visit">
+                                                View Code
+                                        </button>
+                                        </a>
+                                    }
+
                                 </ButtonsWrapper>
                             </div>
 
@@ -133,8 +141,8 @@ const ButtonsWrapper = styled.div`
 
     .visit{
     color: #E0FCDE;
-    width: 10rem;
-    height: 3rem;
+    width: 7rem;
+    height: 2.5rem;
     border-radius: 0.25rem;
     overflow: hidden;
     position: relative;
