@@ -8,6 +8,7 @@ import Profile from '../Images/About/Profile.jpg';
 
 
 const About = (props) => {
+    console.log(window.navigator)
 
     return (
         <RootWrapper>
@@ -38,16 +39,18 @@ const ProfileImage = styled.img`
     margin: 0 auto;
     border-radius: 0.25rem;
     object-fit: cover;
-    width: 30%;
+    width: 20%;
     // border: 1px solid blue;
         @media (max-width: 414px) {
             width: 95%;
+            display: block;
             margin: 0.5rem auto;
         }
 `
 const AboutWrapper = styled.div`
     margin: 0 auto;
     width: 55%;
+    height: 20rem;
     background: #BCE5B9;
     border-radius: 0.5rem;
     padding: 0 0.5rem;
@@ -57,6 +60,7 @@ const AboutWrapper = styled.div`
     // border: 1px solid red;
     @media (max-width: 414px) {
         width: 95%;
+        height: 35rem;
     }
 `
 const AboutHeader = styled.h2`
@@ -91,8 +95,15 @@ const MainContent = styled.div`
     height: 77%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    overflow: scroll;  
     // border: 1px solid black;
-    overflow: scroll;
+        @media (max-width: 414px) {
+            margin-top: 1rem;
+            display: block;
+            height: 85%;
+            margin-bottom: 1.5rem;
+        }
         &::-webkit-scrollbar
             {
                 width: 0.25px;
@@ -103,11 +114,4 @@ const MainContent = styled.div`
             {
                 background-color: #134818;
             }
-
-    @media (max-width: 414px) {
-        margin-top: 1rem;
-        flex-direction: column;
-        height: 85%;
-        margin-bottom: 1.5rem;
-    }
 `
