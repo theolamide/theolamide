@@ -132,11 +132,13 @@ const ButtonsWrapper = styled.div`
     width: 100%;
     display: flex;
 
+    p{
+        margin: auto;      
+    }
+
     .tagbuttons{
         width: 55%;
-        //border: 1px solid black;
-
-        
+        //border: 1px solid black;        
     }
 
     .visit{
@@ -181,7 +183,9 @@ const ButtonsWrapper = styled.div`
     }
 
     @media (max-width: 414px) {
+        // border: 1px solid black;        
         flex-direction: column; 
+        height: 15rem;
             
         .tagbuttons{
             width: 100%;
