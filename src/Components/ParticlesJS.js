@@ -26,10 +26,10 @@ const ParticlesJS = () => {
                 params={{
                     "particles": {
                         "number": {
-                            "value": 10,
+                            "value": 15,
                             "density": {
                                 "enable": true,
-                                "value_area": 800
+                                "value_area": 5000
                             }
                         },
                         "line_linked": {
@@ -50,16 +50,6 @@ const ParticlesJS = () => {
                                     "width": 20
                                 },
                                 {
-                                    "src": `${Camera}`,
-                                    "height": 20,
-                                    "width": 20
-                                },
-                                {
-                                    "src": `${CreativeCloud}`,
-                                    "height": 20,
-                                    "width": 20
-                                },
-                                {
                                     "src": `${Git}`,
                                     "height": 20,
                                     "width": 20
@@ -70,17 +60,7 @@ const ParticlesJS = () => {
                                     "width": 20
                                 },
                                 {
-                                    "src": `${LightRoom}`,
-                                    "height": 20,
-                                    "width": 20
-                                },
-                                {
                                     "src": `${MatLab}`,
-                                    "height": 20,
-                                    "width": 20
-                                },
-                                {
-                                    "src": `${PhotoShop}`,
                                     "height": 20,
                                     "width": 20
                                 },
@@ -91,11 +71,6 @@ const ParticlesJS = () => {
                                 },
                                 {
                                     "src": `${SQL}`,
-                                    "height": 20,
-                                    "width": 20
-                                },
-                                {
-                                    "src": `${VintageCamera}`,
                                     "height": 20,
                                     "width": 20
                                 },

@@ -87,10 +87,10 @@ const AboutParagraph = styled.p`
     margin: 0 auto;
     // border: 1px solid orange;
     color: #0E4416;
-        overflow: scroll;
+    overflow: auto;
         &::-webkit-scrollbar
             {
-                width: 0px;
+                width: 3px;
                 height: 0px;
                 background-color: #E0FCDE;
             } 
@@ -107,7 +107,7 @@ const MainContent = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center; 
-    overflow: scroll;
+    overflow: auto;
     // border: 1px solid brown;
     @media (max-width: 1400px) {
         height: 62.25%;

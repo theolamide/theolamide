@@ -35,7 +35,7 @@ export const PortfolioData = [
         index: 1,    //These should be incremental from the last interger
         title: "Merch Dropper",
         cover: `${MerchDropperCover}`,
-        description: "Merch Dropper is the fastest way to set up a hassle free merch shop. The end goal was to create an online drop-shipping platform to upload designs and create products that plug into scalablepress.com. I worked on this project for 8 weeks with a group of 5 other student developers and 2 UI/UX designers before passing it on to the next cohort as a build-on project. I specifically worked on shopping cart population, checkout payments integration utilizing stripe, mobile view hamburger & navigation, state persitence, and the README documentation on the frontend. On the backend, I worked on the data schema design and population.",
+        description: "Merch Dropper is the fastest way to set up a hassle free merch shop. The end goal was to create an online drop-shipping platform to upload designs and create products that plug into scalablepress.com. I worked on this project for 8 weeks with a group of 5 other student developers and 2 UI/UX designers before passing it on to the next cohort as a build-on project. I specifically worked on shopping cart population, checkout payments integration utilizing Stripe, mobile view hamburger & navigation, state persistence, and the README documentation on the frontend. On the backend, I worked on the data schema design and population.",
         technologies: ["ReactJS", "NodeJS", "Express", "Redux", "axios", "knex", "PostgressSQL", "Jest"],
         link: "https://www.merchdropper.store/",
         github: "https://github.com/Lambda-School-Labs/Merch-Dropper-fe"
@@ -44,7 +44,7 @@ export const PortfolioData = [
         index: 2,    //These should be incremental from the last interger
         title: "howfinder",
         cover: `${HowFinderCover}`,
-        description: "howfinder is a social media type app that indexes how to solve a lot of problems. It will work like a directory where users can search for specific things they want to learn about. It could be anything from `How do I learn how to tie a bow?`  to  `How do I sign up for going to space?`. The frontend was a solo effort while the backend was built by a friend.",
+        description: "howfinder is a social media type app that indexes how to solve a lot of problems. It will work like a directory where users can search for specific things they want to learn about. It could be anything from `How do I learn how to tie a bow?`  to  `How do I sign up for going to space?`. Worked with one other developer to build this project remotely, the frontend was a solo effort and the backend that was built by project partner.",
         technologies: ["ReactJS", "NodeJS", "Express", "axios", "Formik", "styled-components"],
         link: "https://howfinder.now.sh/#/",
         github: "https://github.com/theolamide/howfinder"
@@ -53,7 +53,7 @@ export const PortfolioData = [
         index: 3,    //These should be incremental from the last interger
         title: "CAIN Africa",
         cover: `${CainAfrica}`,
-        description: "A fully responsive informational website for a non profit focused on Education and Healthcare for the less priviledged in Africa. Website must haves included donations and forms handling, blogging capability, and gallery carousel. Paypal, and paystack were used to handle collections of monnies, external API call was made to the organizations Medium page to display blog posts, and React Grid Library for image gallery. This website was single handedly built by me.",
+        description: "A fully responsive informational website for a non profit focused on education and healthcare for the less priviledged in Africa. Website must haves included donations and forms handling, blogging capability, and gallery carousel. Paypal, and Paystack were used to handle collections of monnies, external API call was made to the organizations Medium page to display blog posts, and React Grid Library for image gallery. This website was single handedly built by me.",
         technologies: ["ReactJS", "axios", "react-grid-gallery", "styled-components"],
         link: "https://www.cainafrica.org/#/",
         github: "Private"
