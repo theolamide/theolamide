@@ -29,7 +29,7 @@ const ParticlesJS = () => {
                             "value": 10,
                             "density": {
                                 "enable": true,
-                                "value_area": 800
+                                "value_area": 5000
                             }
                         },
                         "line_linked": {
@@ -49,16 +49,16 @@ const ParticlesJS = () => {
                                     "height": 20,
                                     "width": 20
                                 },
-                                {
-                                    "src": `${Camera}`,
-                                    "height": 20,
-                                    "width": 20
-                                },
-                                {
-                                    "src": `${CreativeCloud}`,
-                                    "height": 20,
-                                    "width": 20
-                                },
+                                // {
+                                //     "src": `${Camera}`,
+                                //     "height": 20,
+                                //     "width": 20
+                                // },
+                                // {
+                                //     "src": `${CreativeCloud}`,
+                                //     "height": 20,
+                                //     "width": 20
+                                // },
                                 {
                                     "src": `${Git}`,
                                     "height": 20,
@@ -69,21 +69,21 @@ const ParticlesJS = () => {
                                     "height": 20,
                                     "width": 20
                                 },
-                                {
-                                    "src": `${LightRoom}`,
-                                    "height": 20,
-                                    "width": 20
-                                },
+                                // {
+                                //     "src": `${LightRoom}`,
+                                //     "height": 20,
+                                //     "width": 20
+                                // },
                                 {
                                     "src": `${MatLab}`,
                                     "height": 20,
                                     "width": 20
                                 },
-                                {
-                                    "src": `${PhotoShop}`,
-                                    "height": 20,
-                                    "width": 20
-                                },
+                                // {
+                                //     "src": `${PhotoShop}`,
+                                //     "height": 20,
+                                //     "width": 20
+                                // },
                                 {
                                     "src": `${Python}`,
                                     "height": 20,
@@ -94,11 +94,11 @@ const ParticlesJS = () => {
                                     "height": 20,
                                     "width": 20
                                 },
-                                {
-                                    "src": `${VintageCamera}`,
-                                    "height": 20,
-                                    "width": 20
-                                },
+                                // {
+                                //     "src": `${VintageCamera}`,
+                                //     "height": 20,
+                                //     "width": 20
+                                // },
                                 {
                                     "src": `${ReactJs}`,
                                     "height": 20,
