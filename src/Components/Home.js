@@ -45,6 +45,15 @@ const MainContent = styled.div`
     display: flex;
     justify-content: space-around;
     // border: 1px solid blue;
+
+    @media (max-width: 1400px) {
+        height: 55%;
+        // border: 1px solid blue;
+    }
+
+    @media (max-width: 1150px) {
+        flex-direction: column-reverse;
+    }
     
     @media (max-width: 768px) {
             margin-top: 2rem;
@@ -68,6 +77,10 @@ const TitlesWrapper = styled.div`
     // border: 1px solid black;
     //border-radius: 0.75rem;
     //border-right: 0.25rem solid #67973E;
+
+    @media (max-width: 1150px) {
+        margin: 0 auto;
+    }
     
     @media (max-width: 768px) {
             width: 100%;
@@ -89,6 +102,10 @@ const NameTitle = styled.h1`
     padding-bottom: 2rem;
     margin-bottom: 1rem;
     
+    @media (max-width: 1150px) {
+        font-size: 7rem;
+    }
+    
     @media (max-width: 768px) {
             font-size: 5rem;
             margin: 0 auto;
@@ -105,6 +122,10 @@ const Titles = styled.h2`
     text-align: center;
     // background: #E0FCDE;
     // border: 1px solid black;
+    
+    @media (max-width: 1150px) {
+        font-size: 2rem;
+    }
 
     @media (max-width: 414px) {
             padding-top: 1rem;

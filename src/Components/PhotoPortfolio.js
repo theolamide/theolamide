@@ -29,7 +29,7 @@ const MainContent = styled.div`
     margin: auto;
     margin-top: 1rem;
     width: 95%;
-    height: 82%;
+    height: 75.5vh;
     display: flex;
     justify-content: space-between;
     // border: 1px solid black;
