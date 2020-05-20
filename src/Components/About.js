@@ -17,7 +17,7 @@ const About = (props) => {
                 <AboutWrapper>
                     <AboutHeader>aboutMe</AboutHeader>
                     <AboutParagraph>
-                        I spend most of my days writing Javascript in the form of ReactJS and NodeJs, but lately I've been writing more Python. In my spare time I like to travel and photograph breathtaking landscapes. In my former life (read a year ago) I was a Mechanical Engineer designing and servicing fuel trains for industrial heating systems. In June 2019, I decided to switch career paths to the Software side of things as I have always been fascinated by Tech and the impact of it. I made the final decision on an 18 day cross country trip that was eye opening and exhilirating at the same time. The reasoning was that life is too short to not go after something I'm really passionate about becasue I feel it's too late. Since making the decision I've literally lived, breathe, slept and eaten code since then trying to get my skills up to employability. I am at a place now where I have learnt enough to know I bring a lot to the table for any employer.
+                        I spend most of my days writing Javascript in the form of ReactJS and NodeJs, but lately I've been writing more Python. In my spare time I like to travel and photograph breathtaking landscapes. In my former life (read a year ago) I was a Mechanical Engineer designing and servicing fuel trains for industrial heating systems. In June 2019, I decided to switch career paths to the Software side of things as I have always been fascinated by Tech and the impact of it. I made the final decision on an 18 day cross country trip that was eye opening and exhilirating at the same time. The reasoning was that life is too short to not go after something I'm really passionate about becasue I feel it's too late. Since making the decision I've literally lived, breathe, slept and eaten code since then trying to get my skills up to employability.
                     </AboutParagraph>
                 </AboutWrapper>
                 <ProfileImage src={Profile} alt="profile image" />
@@ -107,6 +107,7 @@ const MainContent = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center; 
+    overflow: scroll;
     // border: 1px solid brown;
     @media (max-width: 1400px) {
         height: 62.25%;
