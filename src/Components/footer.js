@@ -17,7 +17,7 @@ const FooterBox = styled.div`
     border-radius: 0.25rem;
     background: #BCE5B9;
     // border: 1px solid black;
-        @media (max-width: 768px) {
+        @media (max-width: 4000px) {
             margin-top: 4rem;
             height: 3rem;
             width: 7rem;

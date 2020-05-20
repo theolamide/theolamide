@@ -101,41 +101,44 @@ const AboutParagraph = styled.p`
 `
 const MainContent = styled.div`
     margin: auto;
-    margin-top: 2rem;
-    width: 95%;
-    height: 77%;
+    margin-top: 1rem;
+    width: 90%;
+    height: 75vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    overflow: scroll;  
-    // border: 2px solid brown;
+    justify-content: space-around;
+    align-items: center; 
+    // border: 1px solid brown;
+    @media (max-width: 1400px) {
+        height: 62.25%;
+        // border: 1px solid blue;
+    }
 
     @media (max-width: 768px) {
-            margin-bottom: 0rem;
-            height: 82%;
-            display: flex;
-            flex-direction:column;
-            justify-content: space-around;
-        }
+        margin-bottom: 0rem;
+        height: 82%;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+    }
 
-        @media (max-width: 414px) {
-            // width: 93%;
-            margin-top: 1rem;
-            display: block;
-            height: 73%;
-            // margin-bottom: 1.5rem;
-        }
+    @media (max-width: 414px) {
+        // width: 93%;
+        margin-top: 1rem;
+        display: block;
+        height: 73%;
+        // margin-bottom: 1.5rem;
+    }
 
-                &::-webkit-scrollbar
-            {
-                width: 5px;
-                height: 0px;
-                background-color: #BCE5B9;
-                border-radius: 0.05rem;
-            } 
-        &::-webkit-scrollbar-thumb
-            {
-                background-color: #134818;
-                border-radius: 0.05rem;
-            }
+    &::-webkit-scrollbar
+        {
+            width: 5px;
+            height: 0px;
+            background-color: #BCE5B9;
+            border-radius: 0.05rem;
+        } 
+    &::-webkit-scrollbar-thumb
+        {
+            background-color: #134818;
+            border-radius: 0.05rem;
+        }
 `

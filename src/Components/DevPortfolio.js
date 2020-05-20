@@ -75,7 +75,7 @@ const RootWrapper = styled.div`
 const MapWrapper = styled.div`
     margin: 0 auto;
     width: 95%;
-    height: 85%;
+    height: 77vh;
     // border: 1px solid blue;
     overflow: scroll;
         &::-webkit-scrollbar
@@ -93,6 +93,11 @@ const MapWrapper = styled.div`
             @media (max-width: 1280px) {
             height: 80%;
             margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 1400px) {
+            height: 65%;
+            // border: 1px solid blue;
         }
 
         @media (max-width: 768px) {
