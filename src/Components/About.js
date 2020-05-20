@@ -107,6 +107,7 @@ const MainContent = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center; 
+    overflow: scroll;
     // border: 1px solid brown;
     @media (max-width: 1400px) {
         height: 62.25%;
