@@ -26,7 +26,7 @@ const ParticlesJS = () => {
                 params={{
                     "particles": {
                         "number": {
-                            "value": 15,
+                            "value": 10,
                             "density": {
                                 "enable": true,
                                 "value_area": 800
@@ -36,13 +36,12 @@ const ParticlesJS = () => {
                             "enable": false
                         },
                         "move": {
-                            "speed": 10,
+                            "speed": 5,
                             "out_mode": "bounce"
                         },
                         "shape": {
                             "type": [
-                                "images",
-                                "circle"
+                                "images"
                             ],
                             "images": [
                                 {
@@ -169,7 +168,7 @@ const ParticlesJS = () => {
                     "retina_detect": false
                 }}
                 style={{
-                    position: "absolute",
+                    position: "fixed",
                     top: 0,
                     left: 0,
                     width: "100%",

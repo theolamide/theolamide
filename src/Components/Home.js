@@ -34,12 +34,8 @@ export default Home;
 
 const RootWrapper = styled.div`
     width: 100%;
-    //height: 100%;
-    // border: 1px solid red;
-    @media (max-width: 414px) {
-            height: 100%;
-        }
-    
+    height: 100%;
+    // border: 1px solid red;    
 `
 const MainContent = styled.div`
     margin: auto;
@@ -49,17 +45,20 @@ const MainContent = styled.div`
     display: flex;
     justify-content: space-around;
     // border: 1px solid blue;
+    
     @media (max-width: 768px) {
+            margin-top: 2rem;
             flex-direction: column-reverse;
-            height: 100%;
+            height: 77%;
         }
-        @media (max-width: 414px) {
-            margin-top: 1rem;
-            justify-content: center;
-            height: 82%;
-            flex-direction: column-reverse;
-            margin-bottom: 1.5rem;
-        }
+
+    @media (max-width: 414px) {
+        margin-top: 1rem;
+        justify-content: center;
+        height: 72%;
+        flex-direction: column-reverse;
+        margin-bottom: 1.5rem;
+    }
 `
 const TitlesWrapper = styled.div`
     width: 70%;
@@ -69,12 +68,14 @@ const TitlesWrapper = styled.div`
     // border: 1px solid black;
     //border-radius: 0.75rem;
     //border-right: 0.25rem solid #67973E;
+    
     @media (max-width: 768px) {
             width: 100%;
             margin: 0 auto;
         }
-        @media (max-width: 414px) {
-            margin: 3rem auto;
+    
+    @media (max-width: 414px) {
+            margin: 0 auto;
             margin-bottom: 0;
             border: none;
             // border: 1px solid black;
@@ -93,9 +94,9 @@ const NameTitle = styled.h1`
             margin: 0 auto;
         }
     
-        @media (max-width: 414px) {
-            font-size: 3rem;
-        }
+    @media (max-width: 414px) {
+        font-size: 3rem;
+    }
 `
 const Titles = styled.h2`
     margin: 0 auto;
@@ -108,13 +109,21 @@ const Titles = styled.h2`
     @media (max-width: 414px) {
             padding-top: 1rem;
             font-size: 1.05rem;
+            margin-bottom: 3rem;
         }
 `
 const MainContentLogo = styled.img`
     width: 15rem;
     object-fit: cover;
     margin: auto;
+    // border: 1px solid black;
+    
     @media (max-width: 768px) {
+            padding-top: 10rem;
             margin: 0 auto;
+        }
+    @media (max-width: 414px) {
+            padding-top: 1rem;
+            width: 10rem;
         }
 `
