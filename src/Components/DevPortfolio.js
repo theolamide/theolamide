@@ -35,7 +35,12 @@ const DevPortfolio = (props) => {
                                         </button>
                                     </a>
                                     {/* Render repository link conditionally depending on wether it is private/proprietary or not */}
-                                    {project.github === "Private" ? <p>Private Repository</p> :
+                                    {project.github === "Private" ?
+                                        <p>
+                                            <strong>
+                                                Private Repository
+                                            </strong>
+                                        </p> :
                                         <a href={project.github} target="_blank" rel="noopener noreferrer" style={{ margin: "auto" }} >
                                             <button className="visit">
                                                 View Code
@@ -63,23 +68,21 @@ export default DevPortfolio;
 const RootWrapper = styled.div`
     width: 100%;
     height: 100%;
-    border: 0px solid black;
     margin: 0;
     // border: 1px solid black;
 `
 
 const MapWrapper = styled.div`
     margin: 0 auto;
-    width: 100%;
-    height: 80%;
-    // height: 70vh;
-    // border: 1px solid black;
+    width: 95%;
+    height: 85%;
+    // border: 1px solid blue;
     overflow: scroll;
         &::-webkit-scrollbar
             {
-                width: 0px;
+                width: 5px;
                 height: 0px;
-                background-color: #E0FCDE;
+                background-color: #BCE5B9;
                 border-radius: 0.05rem;
             } 
         &::-webkit-scrollbar-thumb
@@ -87,9 +90,20 @@ const MapWrapper = styled.div`
                 background-color: #134818;
                 border-radius: 0.05rem;
             }
-            @media (max-width: 768px) {
-            height: 84%;
+            @media (max-width: 1280px) {
+            height: 80%;
             margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            width: 95%;
+            height: 85%;
+            margin-bottom: 1.5rem;
+        }
+        @media (max-width: 414px) {
+            width: 95%;
+            height: 76%;
+            margin-bottom: 0.5rem;
         }
 `
 
@@ -101,7 +115,7 @@ const ProjectWrapper = styled.div`
     background: #BCE5B9;
     padding: 1rem;
     border-radius: 0.5rem;
-    //border: 1px solid black;
+    // border: 1px solid black;
         .mainContent{
             width: 55%;
                 @media (max-width: 414px) {
@@ -119,7 +133,7 @@ const ProjectCover = styled.img`
     width: 40%;
     cursor: pointer;
         &:hover{
-                    border: 1px solid #134818;
+                    // border: 1px solid #134818;
                     transform: scale(1.02);
                     // will-change: transform;
                 }
@@ -197,7 +211,7 @@ const TagButtonDiv = styled.div`
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-    //border: 1px solid black;
+    // border: 1px solid black;
         
     .tags{
             outline:none;

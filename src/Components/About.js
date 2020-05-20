@@ -31,7 +31,7 @@ export default About;
 
 
 const RootWrapper = styled.div`
-    height: 96%;
+    height: 100%;
     // border: 1px solid blue;
 `
 
@@ -40,9 +40,15 @@ const ProfileImage = styled.img`
     border-radius: 0.25rem;
     object-fit: cover;
     width: 20%;
-    // border: 1px solid blue;
+    // border: 1px solid red;
+
+        @media (max-width: 768px) {
+            width: 33%;
+            display: block;
+            margin: 0.5rem auto;
+        }
         @media (max-width: 414px) {
-            width: 95%;
+            width: 80%;
             display: block;
             margin: 0.5rem auto;
         }
@@ -57,10 +63,15 @@ const AboutWrapper = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    // border: 1px solid red;
+    // border: 1px solid black;
+
+    @media (max-width: 768px) {
+            height: 30rem;
+        }
+
     @media (max-width: 414px) {
-        width: 95%;
-        height: 35rem;
+        width: 93%;
+        height: 36rem;
     }
 `
 const AboutHeader = styled.h2`
@@ -97,21 +108,34 @@ const MainContent = styled.div`
     justify-content: space-between;
     align-items: center;
     overflow: scroll;  
-    // border: 1px solid black;
+    // border: 2px solid brown;
+
+    @media (max-width: 768px) {
+            margin-bottom: 0rem;
+            height: 82%;
+            display: flex;
+            flex-direction:column;
+            justify-content: space-around;
+        }
+
         @media (max-width: 414px) {
+            // width: 93%;
             margin-top: 1rem;
             display: block;
-            height: 85%;
-            margin-bottom: 1.5rem;
+            height: 73%;
+            // margin-bottom: 1.5rem;
         }
-        &::-webkit-scrollbar
+
+                &::-webkit-scrollbar
             {
-                width: 0.25px;
+                width: 5px;
                 height: 0px;
-                background-color: #E0FCDE;
+                background-color: #BCE5B9;
+                border-radius: 0.05rem;
             } 
         &::-webkit-scrollbar-thumb
             {
                 background-color: #134818;
+                border-radius: 0.05rem;
             }
 `

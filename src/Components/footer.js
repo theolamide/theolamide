@@ -5,19 +5,25 @@ import { InlineFollowButtons } from 'sharethis-reactjs';
 
 
 const FooterBox = styled.div`
+    margin: 0 auto;
     width: 100%;
     height: 3.5rem;
     text-align:center;
-    // background: #E0FCDE;
     background: none;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 0.5rem;
+    border-radius: 0.25rem;
+    background: #BCE5B9;
     // border: 1px solid black;
-    // position: fixed;
         @media (max-width: 768px) {
-            height: 0rem;
-            flex-direction: column;
+            margin-top: 4rem;
+            height: 3rem;
+            width: 7rem;
+        }
+        @media (max-width: 414px) {
+            margin-top: 1.25rem;
         }
 `
 const LogoBox = styled.div`

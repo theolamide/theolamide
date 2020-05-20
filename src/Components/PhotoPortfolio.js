@@ -38,16 +38,21 @@ const MainContent = styled.div`
             {
                 width: 6px;
                 height: 0px;
-                background-color: #E0FCDE;
+                background-color: #BCE5B9;
             } 
         &::-webkit-scrollbar-thumb
             {
                 background-color: #134818;
             }
 
-    @media (max-width: 414px) {
-        flex-direction: column;
-        height: 85%;
-        margin-bottom: 1.5rem;
-    }
+        @media (max-width: 768px) {
+            width: 95%;
+            height: 87%;
+        }
+
+        @media (max-width: 414px) {
+            flex-direction: column;
+            height: 75%;
+            // margin-bottom: 1.5rem;
+        }
 `
