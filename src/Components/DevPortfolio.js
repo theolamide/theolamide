@@ -182,7 +182,7 @@ const ButtonsWrapper = styled.div`
                 position: absolute;
                 left: 0;
                 top: 0;
-                transform: translate(-20%, 0);
+                transform: translate(-13%, 0);
                 transform-origin: top left;
                 transition: .2s transform ease-out;
                 will-change: transform;
