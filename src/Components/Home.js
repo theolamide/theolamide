@@ -18,7 +18,7 @@ const Home = (props) => {
 
                 <TitlesWrapper>
                     <NameTitle>theỌlámidé</NameTitle>
-                    <Titles>Full-Stack Dev. / Mech. Engineer / Photographer</Titles>
+                    <Titles>Full-Stack Developer & Photographer</Titles>
                 </TitlesWrapper>
 
                 <MainContentLogo src={Logo} />
