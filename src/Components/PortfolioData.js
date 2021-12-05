@@ -2,6 +2,7 @@ import MerchDropperCover from '../Images/DevPortfolioGallery/MerchDropperCover.J
 import HowFinderCover from '../Images/DevPortfolioGallery/HowFinderCover.JPG';
 import CainAfrica from '../Images/DevPortfolioGallery/CainAfrica.JPG';
 import TodoList from '../Images/DevPortfolioGallery/TodoList.JPG'
+import ShapesSVGCover from '../Images/DevPortfolioGallery/ShapesSVGCover.JPG'
 
 import Akolade1 from '../Images/PhotoPortfolioGallery/Akolade1.jpg'
 import Avatar1 from '../Images/PhotoPortfolioGallery/Avatar1.jpg'
@@ -32,15 +33,15 @@ import Viva3 from '../Images/PhotoPortfolioGallery/Viva3.jpg'
 
 
 export const PortfolioData = [
-//     {
-//         index: 1,    //These should be incremental from the last interger
-//         title: "howfinder",
-//         cover: `${HowFinderCover}`,
-//         description: "howfinder is a social media type app that indexes how to solve a lot of problems. It will work like a directory where users can search for specific things they want to learn about. It could be anything from `How do I learn how to tie a bow?`  to  `How do I sign up for going to space?`. Worked with one other developer to build this project remotely, the frontend was a solo effort and the backend that was built by project partner.",
-//         technologies: ["ReactJS", "NodeJS", "Express", "axios", "Formik", "styled-components"],
-//         link: "https://howfinder.now.sh/#/",
-//         github: "https://github.com/theolamide/howfinder"
-//     },
+    {
+        index: 1,    //These should be incremental from the last interger
+        title: "Shapes",
+        cover: `${ShapesSVGCover}`,
+        description: "Shapes is a little fun demonstration in the use of localstroge for populating, holding, retrieving, and mutating data as needed as well as data persistence. Along with that, it is also a study of input interaction while using their parameters to draw SVG shapes on a 'canvas'. It is styled with vanilla CSS and is fully responsive.",
+        technologies: ["ReactJS", "Vanilla CSS", "LocalStorage", ],
+        link: "https://shapes-svg.theolamide.vercel.app/",
+        github: "https://github.com/theolamide/ShapesSVG"
+    },
     {
         index: 2,    //These should be incremental from the last interger
         title: "Todo List",
