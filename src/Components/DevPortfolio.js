@@ -51,7 +51,7 @@ const DevPortfolio = (props) => {
                                 </ButtonsWrapper>
                             </div>
 
-                            <ProjectCover src={project.cover} alt="project cover photo" onClick={() => project.link} />
+                            <ProjectCover src={project.cover} alt="project cover photo" onClick={() => window.open(project.link, "_blank", "noopener,noreferrer")} />
                         </ProjectWrapper>
                     </div>
                 ))}
