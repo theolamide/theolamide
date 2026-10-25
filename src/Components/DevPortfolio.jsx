@@ -194,7 +194,7 @@ const ButtonsWrapper = styled.div`
             }
             
             &:hover{
-                border: 2px solid #E0FCDEt;
+                border: 2px solid #E0FCDE;
                 color: #E0FCDE;
                 transform: scale(1.05);
                 will-change: transform;
