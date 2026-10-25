@@ -58,7 +58,7 @@ const Footer = () => {
                         ],
                         padding: 8,           // padding within buttons (INTEGER)
                         profiles: {           // social profile links for buttons
-                            linkedin: '/in/daniel-olamide-ajadi/',
+                            linkedin: 'in/daniel-olamide-ajadi',
                             github: 'theolamide'
                         },
                         radius: 15,            // the corner radius on each button (INTEGER)

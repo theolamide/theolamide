@@ -51,7 +51,7 @@ const DevPortfolio = (props) => {
                                 </ButtonsWrapper>
                             </div>
 
-                            <ProjectCover src={project.cover} alt="project cover photo" onClick={() => project.link} />
+                            <ProjectCover src={project.cover} alt="project cover photo" onClick={() => window.open(project.link, "_blank", "noopener,noreferrer")} />
                         </ProjectWrapper>
                     </div>
                 ))}
@@ -194,7 +194,7 @@ const ButtonsWrapper = styled.div`
             }
             
             &:hover{
-                border: 2px solid #E0FCDEt;
+                border: 2px solid #E0FCDE;
                 color: #E0FCDE;
                 transform: scale(1.05);
                 will-change: transform;

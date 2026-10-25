@@ -8,7 +8,6 @@ import Profile from '../Images/About/Profile.jpg';
 
 
 const About = (props) => {
-    console.log(window.navigator)
 
     return (
         <RootWrapper>
