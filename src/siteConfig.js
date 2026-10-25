@@ -11,7 +11,7 @@ export const LINKS = {
 
 // Set to a file in public/ (e.g. '/Olamide-Ajadi-Resume.pdf') or a hosted URL.
 // Résumé buttons stay hidden while this is null.
-export const RESUME_URL = null;
+export const RESUME_URL = '/Daniel-Olamide-Ajadi-Resume.pdf';
 
 export const OG_IMAGE = `${SITE_URL}/OgThumbnail.JPG`;
 
