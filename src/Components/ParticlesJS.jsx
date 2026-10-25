@@ -1,5 +1,8 @@
-import React from "react";
-import Particles from 'react-particles-js';
+import React, { Suspense, lazy, useEffect, useState } from "react";
+
+// Loaded only in the browser, after first paint: keeps it out of the prerendered
+// HTML and the main bundle.
+const Particles = lazy(() => import('react-particles-js'));
 
 
 // import Camera from '../Images/Icons/Camera.png';
@@ -16,11 +19,30 @@ import ReactJs from '../Images/Icons/ReactJs.png';
 import SQL from '../Images/Icons/SQL.png';
 // import VintageCamera from '../Images/Icons/VintageCamera.png';
 
-const ParticlesJS = () => {
+const backgroundStyle = {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    backgroundColor: "#E0FCDE"
+};
 
+const ParticlesJS = () => {
+    const [mounted, setMounted] = useState(false);
+    const [reduceMotion, setReduceMotion] = useState(false);
+
+    useEffect(() => {
+        setReduceMotion(Boolean(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches));
+        setMounted(true);
+    }, []);
+
+    if (!mounted) {
+        return <div style={backgroundStyle} />;
+    }
 
     return (
-        <div>
+        <Suspense fallback={<div style={backgroundStyle} />}>
 
             <Particles
                 params={{
@@ -36,6 +58,7 @@ const ParticlesJS = () => {
                             "enable": false
                         },
                         "move": {
+                            "enable": !reduceMotion,
                             "speed": 5,
                             "out_mode": "bounce"
                         },
@@ -93,7 +116,7 @@ const ParticlesJS = () => {
                             "value": 30,
                             "random": false,
                             "anim": {
-                                "enable": true,
+                                "enable": !reduceMotion,
                                 "speed": 4,
                                 "size_min": 15,
                                 "sync": false
@@ -142,15 +165,8 @@ const ParticlesJS = () => {
 
                     "retina_detect": false
                 }}
-                style={{
-                    position: "fixed",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    backgroundColor: "#E0FCDE"
-                }} />
-        </div >
+                style={backgroundStyle} />
+        </Suspense>
     )
 }
 

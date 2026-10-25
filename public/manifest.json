@@ -8,7 +8,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "www.theolamide.me",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#E0FCDE",
   "background_color": "#396C29"

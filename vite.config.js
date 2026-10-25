@@ -6,6 +6,11 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  // Bundle dependencies into the prerender build: React 16 and friends are
+  // CommonJS-only, which Node's ESM loader cannot import by name.
+  ssr: {
+    noExternal: true,
+  },
   test: {
     environment: 'jsdom',
     globals: true,

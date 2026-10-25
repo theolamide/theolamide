@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
-import { Route, Switch, BrowserRouter } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
 
 import NavBar from './Components/NavBar';
 import Home from './Components/Home';
@@ -9,13 +9,22 @@ import DevPortfolio from './Components/DevPortfolio';
 import PhotoPortfolio from './Components/PhotoPortfolio';
 
 import ParticlesJS from "./Components/ParticlesJS";
+import { applyPageMeta } from './seo';
 
 
 import './App.css';
 
+// The router is supplied by the caller: BrowserRouter in the browser (index.jsx),
+// StaticRouter when prerendering (entry-server.jsx).
 function App() {
 
   const [NavAppear, setNavAppear] = useState({ topDrawerOpen: false })
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    applyPageMeta(pathname);
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   let drawerToggleClickHandler = () => {
     setNavAppear((prevState) => {
@@ -29,7 +38,6 @@ function App() {
 
 
   return (
-    <BrowserRouter>
       <SiteWrapper>
         <ParticlesJS />
 
@@ -44,9 +52,6 @@ function App() {
 
         </SubWrapper>
       </SiteWrapper>
-
-    </BrowserRouter>
-
   );
 }
 

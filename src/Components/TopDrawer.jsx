@@ -10,12 +10,12 @@ const TopDrawer = ({ closeDrawer }) => {
     return (
         <RootWrapper>
             <TopContainer>
-                <Link to="/" onClick={closeDrawer}>
-                    <LogoWrapper src={Logo} alt="logo" />
+                <Link to="/" onClick={closeDrawer} aria-label="Home">
+                    <LogoWrapper src={Logo} alt="" />
                 </Link>
 
                 <LinkAndHamWrapper>
-                    <LinkWrapper>
+                    <LinkWrapper aria-label="Main">
 
                         <StyledLink to="/about" onClick={closeDrawer}>aboutMe</StyledLink>
 
@@ -31,8 +31,8 @@ const TopDrawer = ({ closeDrawer }) => {
                         <StyledLink to="/store" onClick={closeDrawer}>buyMyArt</StyledLink> */}
                     </LinkWrapper>
 
-                    <HamWrapper onClick={closeDrawer}>
-                        <CloseHamTag src={HamClose} />
+                    <HamWrapper type="button" aria-label="Close menu" onClick={closeDrawer}>
+                        <CloseHamTag src={HamClose} alt="" />
                     </HamWrapper>
                 </LinkAndHamWrapper>
 
@@ -81,7 +81,7 @@ const LinkAndHamWrapper = styled.div`
                 align-items: flex-end;
             }
 `
-const LinkWrapper = styled.div`
+const LinkWrapper = styled.nav`
     width: 80%;
     display: flex;
     justify-content: space-around;
@@ -110,9 +110,17 @@ const StyledLink = styled(Link)`
         padding-right: 0.5rem;
     }
 `
-const HamWrapper = styled.div`
+const HamWrapper = styled.button`
+    padding: 0;
+    border: none;
+    border-radius: 0.25rem;
+    background: none;
     cursor: pointer;
-    // border: 1px solid black;
+
+    &:focus-visible {
+        outline: 3px solid #134818;
+        outline-offset: 3px;
+    }
 `
 const CloseHamTag = styled.img`
     object-fit: cover;
