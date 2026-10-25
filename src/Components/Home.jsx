@@ -19,7 +19,7 @@ const Home = (props) => {
 
                 <TitlesWrapper>
                     <NameTitle>theỌlámidé</NameTitle>
-                    <Titles>Full-Stack Developer & Photographer</Titles>
+                    <Titles>Engineer by profession. Builder by nature.</Titles>
                     <HomeNav aria-label="Sections">
                         <HomeLink to="/about">About me</HomeLink>
                         <HomeLink to="/devportfolio">Software work</HomeLink>
