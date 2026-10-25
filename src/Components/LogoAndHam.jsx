@@ -10,11 +10,11 @@ const LogoandHam = (props) => {
 
     return (
         <TopContainer>
-            <Link to="/">
-                <LogoWrapper src={Logo} />
+            <Link to="/" aria-label="Home">
+                <LogoWrapper src={Logo} alt="" />
             </Link>
-            <HamWrapper onClick={props.drawerToggleClickHandler}>
-                <OpenHamTag src={HamOpen} />
+            <HamWrapper type="button" aria-label="Open menu" onClick={props.drawerToggleClickHandler}>
+                <OpenHamTag src={HamOpen} alt="" />
             </HamWrapper>
         </TopContainer>
     )
@@ -23,7 +23,8 @@ const LogoandHam = (props) => {
 export default LogoandHam;
 
 const TopContainer = styled.div`
-    width: 96%;
+    box-sizing: border-box;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     // border: 1px solid black;
@@ -44,8 +45,17 @@ const LogoWrapper = styled.img`
     object-fit: cover;
     cursor: pointer;
 `
-const HamWrapper = styled.div`
+const HamWrapper = styled.button`
+    padding: 0;
+    border: none;
+    border-radius: 0.25rem;
+    background: none;
     cursor: pointer;
+
+    &:focus-visible {
+        outline: 3px solid #134818;
+        outline-offset: 3px;
+    }
 `
 const OpenHamTag = styled.img`
     object-fit: cover;

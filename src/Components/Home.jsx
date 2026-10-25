@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import LogoandHam from './LogoAndHam';
 import Footer from './footer';
 import styled from 'styled-components';
@@ -19,9 +20,14 @@ const Home = (props) => {
                 <TitlesWrapper>
                     <NameTitle>theỌlámidé</NameTitle>
                     <Titles>Full-Stack Developer & Photographer</Titles>
+                    <HomeNav aria-label="Sections">
+                        <HomeLink to="/about">About me</HomeLink>
+                        <HomeLink to="/devportfolio">Software work</HomeLink>
+                        <HomeLink to="/photoportfolio">Photography</HomeLink>
+                    </HomeNav>
                 </TitlesWrapper>
 
-                <MainContentLogo src={Logo} />
+                <MainContentLogo src={Logo} alt="" />
 
             </MainContent>
             <Footer />
@@ -147,4 +153,43 @@ const MainContentLogo = styled.img`
             padding-top: 1rem;
             width: 10rem;
         }
+`
+
+const HomeNav = styled.nav`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: -4rem auto 0;
+
+    @media (max-width: 414px) {
+        margin-top: -2rem;
+    }
+`
+const HomeLink = styled(Link)`
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0 1.25rem;
+    border: 2px solid #134818;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #134818;
+    background: #E0FCDE;
+    transition: background-color 0.15s ease, color 0.15s ease;
+
+    &:hover {
+        color: #E0FCDE;
+        background: #134818;
+    }
+
+    &:focus-visible {
+        outline: 3px solid #134818;
+        outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
 `
