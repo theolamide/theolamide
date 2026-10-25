@@ -1,5 +1,3 @@
-import MerchDropperCover from '../Images/DevPortfolioGallery/MerchDropperCover.JPG';
-import HowFinderCover from '../Images/DevPortfolioGallery/HowFinderCover.JPG';
 import CainAfrica from '../Images/DevPortfolioGallery/CainAfrica.JPG';
 import TodoList from '../Images/DevPortfolioGallery/TodoList.JPG'
 import ShapesSVGCover from '../Images/DevPortfolioGallery/ShapesSVGCover.JPG'
@@ -51,15 +49,6 @@ export const PortfolioData = [
         link: "https://reducer-todo.theolamide.now.sh/",
         github: "https://github.com/theolamide/reducer-todo"
     },
-//     {
-//         index: 3,    //These should be incremental from the last interger
-//         title: "Merch Dropper",
-//         cover: `${MerchDropperCover}`,
-//         description: "Merch Dropper is the fastest way to set up a hassle free merch shop. The end goal was to create an online drop-shipping platform to upload designs and create products that plug into scalablepress.com. I worked on this project for 8 weeks with a group of 5 other student developers and 2 UI/UX designers before passing it on to the next cohort as a build-on project. I specifically worked on shopping cart population, checkout payments integration utilizing Stripe, mobile view hamburger & navigation, state persistence, and the README documentation on the frontend. On the backend, I worked on the data schema design and population.",
-//         technologies: ["ReactJS", "NodeJS", "Express", "Redux", "axios", "knex", "PostgressSQL", "Jest"],
-//         link: "https://merchdropper.netlify.app/",
-//         github: "https://github.com/Lambda-School-Labs/Merch-Dropper-fe"
-//     },
     {
         index: 4,    //These should be incremental from the last interger
         title: "CAIN Africa",
