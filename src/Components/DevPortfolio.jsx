@@ -14,6 +14,18 @@ const Featured = ({ product }) => (
                 <FeaturedTagline>{product.tagline}</FeaturedTagline>
             </h2>
             {product.description.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+            {product.technologies && (
+                <FeaturedStack>
+                    <h3>Tech Stack: </h3>
+                    <TagButtonDiv>
+                        {product.technologies.map(tech => (
+                            <button className="tags" key={tech} style={{ margin: "0.25rem" }}>
+                                {tech}
+                            </button>
+                        ))}
+                    </TagButtonDiv>
+                </FeaturedStack>
+            )}
             <FeaturedAction href={product.link} target="_blank" rel="noopener noreferrer">
                 {product.linkLabel}
             </FeaturedAction>
@@ -140,7 +152,6 @@ const FeaturedWrapper = styled.section`
     align-items: center;
     gap: 2rem;
     padding: 1rem;
-    border: 2px solid #134818;
     border-radius: 0.5rem;
     background: #BCE5B9;
 
@@ -175,6 +186,9 @@ const Eyebrow = styled.p`
         text-transform: uppercase;
         color: #134818;
     }
+`
+const FeaturedStack = styled.div`
+    margin-bottom: 1rem;
 `
 const FeaturedTagline = styled.span`
     display: block;

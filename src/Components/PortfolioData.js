@@ -59,6 +59,7 @@ export const FeaturedProducts = [
             "A culturally inspired take on Wordle that makes learning and practicing Yorùbá fun, one word at a time. Wọ́dù reimagines the familiar word-guessing experience with a custom Yorùbá keyboard, tone-aware letter handling, and daily puzzles that celebrate the language.",
             "I designed and built Wọ́dù from the ground up, tackling unique linguistic and technical challenges while creating an accessible, engaging experience that bridges technology, language, and culture.",
         ],
+        technologies: ["ReactJS", "Cloudflare Workers", "Django REST Framework", "PostgreSQL"],
         link: "https://wodu.app",
         linkLabel: "Play at wodu.app",
     },
