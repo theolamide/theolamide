@@ -5,6 +5,32 @@ import styled from 'styled-components';
 
 import { PortfolioData, FeaturedProducts } from './PortfolioData.js'
 
+// Tech stack, project link and code note: the same block on every project.
+const ProjectLinks = ({ project }) => (
+    <ButtonsWrapper>
+        <div className="tagbuttons">
+            <h3>Tech Stack: </h3>
+            <TagButtonDiv>
+                {project.technologies.map(tech => (
+                    <button className="tags" key={tech} style={{ margin: "0.25rem" }}>
+                        {tech}
+                    </button>
+                ))}
+            </TagButtonDiv>
+        </div>
+        <a href={project.link} target="_blank" rel="noopener noreferrer" style={{ margin: "auto" }} >
+            <button className="visit">
+                View Project
+            </button>
+        </a>
+        <p>
+            <strong>
+                Code view available on request
+            </strong>
+        </p>
+    </ButtonsWrapper>
+)
+
 const Featured = ({ product }) => (
     <FeaturedWrapper aria-labelledby={`${product.id}-title`}>
         <FeaturedText>
@@ -14,21 +40,7 @@ const Featured = ({ product }) => (
                 <FeaturedTagline>{product.tagline}</FeaturedTagline>
             </h2>
             {product.description.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
-            {product.technologies && (
-                <FeaturedStack>
-                    <h3>Tech Stack: </h3>
-                    <TagButtonDiv>
-                        {product.technologies.map(tech => (
-                            <button className="tags" key={tech} style={{ margin: "0.25rem" }}>
-                                {tech}
-                            </button>
-                        ))}
-                    </TagButtonDiv>
-                </FeaturedStack>
-            )}
-            <FeaturedAction href={product.link} target="_blank" rel="noopener noreferrer">
-                {product.linkLabel}
-            </FeaturedAction>
+            <ProjectLinks project={product} />
         </FeaturedText>
         <FeaturedCoverLink href={product.link} target="_blank" rel="noopener noreferrer" tabIndex="-1" aria-hidden="true">
             <FeaturedCover src={product.cover} alt={product.coverAlt} width={product.coverSize[0]} height={product.coverSize[1]} />
@@ -50,37 +62,7 @@ const DevPortfolio = (props) => {
                             <div className="mainContent">
                                 <h2>{project.title}</h2>
                                 <p>{project.description}</p>
-                                <ButtonsWrapper>
-                                    <div className="tagbuttons">
-                                        <h3>Tech Stack: </h3>
-                                        <TagButtonDiv>
-                                            {project.technologies.map(tech => (
-                                                <button className="tags" key={tech} style={{ margin: "0.25rem" }}>
-                                                    {tech}
-                                                </button>
-                                            ))}
-                                        </TagButtonDiv>
-                                    </div>
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" style={{ margin: "auto" }} >
-                                        <button className="visit">
-                                            View Project
-                                        </button>
-                                    </a>
-                                    {/* Render repository link conditionally depending on wether it is private/proprietary or not */}
-                                    {project.github === "Private" ?
-                                        <p>
-                                            <strong>
-                                                Private Repository
-                                            </strong>
-                                        </p> :
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer" style={{ margin: "auto" }} >
-                                            <button className="visit">
-                                                View Code
-                                        </button>
-                                        </a>
-                                    }
-
-                                </ButtonsWrapper>
+                                <ProjectLinks project={project} />
                             </div>
 
                             <ProjectCover src={project.cover} alt="project cover photo" onClick={() => window.open(project.link, "_blank", "noopener,noreferrer")} />
@@ -187,42 +169,12 @@ const Eyebrow = styled.p`
         color: #134818;
     }
 `
-const FeaturedStack = styled.div`
-    margin-bottom: 1rem;
-`
 const FeaturedTagline = styled.span`
     display: block;
     margin-top: 0.25rem;
     font-size: 1.25rem;
     font-weight: 600;
     color: #2F5F1C;
-`
-const FeaturedAction = styled.a`
-    box-sizing: border-box;
-    display: inline-flex;
-    align-items: center;
-    min-height: 2.75rem;
-    padding: 0 1.25rem;
-    border: 2px solid #134818;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    text-decoration: none;
-    color: #E0FCDE;
-    background: #134818;
-    transition: background-color 0.15s ease;
-
-    &:hover {
-        background: #0E4416;
-    }
-
-    &:focus-visible {
-        outline: 3px solid #134818;
-        outline-offset: 3px;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        transition: none;
-    }
 `
 const FeaturedCoverLink = styled.a`
     flex: 1 1 55%;
@@ -277,6 +229,7 @@ const ProjectCover = styled.img`
 const ButtonsWrapper = styled.div`
     width: 100%;
     display: flex;
+    gap: 0.75rem;
 
     p{
         margin: auto;      

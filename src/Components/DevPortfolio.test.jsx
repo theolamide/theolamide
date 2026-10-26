@@ -16,6 +16,13 @@ it('shows Tiler and Wodu as featured products, above the project list', () => {
   expect(hrefs).toContain('https://wodu.app');
 });
 
+it('gives every project the same links: View Project and a code-on-request note', () => {
+  const { getAllByText } = renderPage();
+  const count = FeaturedProducts.length + PortfolioData.length;
+  expect(getAllByText('View Project')).toHaveLength(count);
+  expect(getAllByText('Code view available on request')).toHaveLength(count);
+});
+
 it('keeps the CTO role in the past tense', () => {
   const tiler = FeaturedProducts.find(p => p.id === 'tiler');
   expect(tiler.description.join(' ')).toMatch(/As co-founder and CTO, I helped/);

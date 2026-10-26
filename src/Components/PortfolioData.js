@@ -47,7 +47,6 @@ export const FeaturedProducts = [
         ],
         technologies: ["ReactJS", "TypeScript", "ASP.NET (C#)", "SQL Server", "OpenAI API", "Google Calendar API"],
         link: "https://tiler.app",
-        linkLabel: "Visit tiler.app",
     },
     {
         id: "wodu",
@@ -62,7 +61,6 @@ export const FeaturedProducts = [
         ],
         technologies: ["ReactJS", "Cloudflare Workers", "Django REST Framework", "PostgreSQL"],
         link: "https://wodu.app",
-        linkLabel: "Play at wodu.app",
     },
 ]
 
@@ -73,8 +71,7 @@ export const PortfolioData = [
         cover: `${ShapesSVGCover}`,
         description: "Shapes is a little fun demonstration in the use of localstroge for populating, holding, retrieving, and mutating data as needed as well as data persistence. Along with that, it is also a study of input interaction while using their parameters to draw SVG shapes on a 'canvas'. It is styled with vanilla CSS and is fully responsive.",
         technologies: ["ReactJS", "Vanilla CSS", "LocalStorage", ],
-        link: "https://shapes-svg.theolamide.vercel.app/",
-        github: "https://github.com/theolamide/ShapesSVG"
+        link: "https://shapes-svg.theolamide.vercel.app/"
     },
     {
         index: 2,    //These should be incremental from the last interger
@@ -82,8 +79,7 @@ export const PortfolioData = [
         cover: `${TodoList}`,
         description: "Todo List, as the name implies, is a productivity web app that can be used to keep simple lists. This app is always in progress and future versions will have image attachment to individual list items, timers amongst other things.",
         technologies: ["ReactJS", "useReducer", "CSS"],
-        link: "https://reducer-todo.theolamide.now.sh/",
-        github: "https://github.com/theolamide/reducer-todo"
+        link: "https://reducer-todo.theolamide.now.sh/"
     },
     {
         index: 4,    //These should be incremental from the last interger
@@ -91,8 +87,7 @@ export const PortfolioData = [
         cover: `${CainAfrica}`,
         description: "A fully responsive informational website for a non profit focused on education and healthcare for the less priviledged in Africa. Website must haves included donations and forms handling, blogging capability, and gallery carousel. Paypal, and Paystack were used to handle collections of monnies, external API call was made to the organizations Medium page to display blog posts, and React Grid Library for image gallery. This website was single handedly built by me.",
         technologies: ["ReactJS", "axios", "react-grid-gallery", "styled-components"],
-        link: "https://www.cainafrica.org/#/",
-        github: "Private"
+        link: "https://www.cainafrica.org/#/"
     }
 ]
 
