@@ -2,6 +2,7 @@ import CainAfrica from '../Images/DevPortfolioGallery/CainAfrica.JPG';
 import TodoList from '../Images/DevPortfolioGallery/TodoList.JPG'
 import ShapesSVGCover from '../Images/DevPortfolioGallery/ShapesSVGCover.JPG'
 import TilerCover from '../Images/DevPortfolioGallery/TilerCover.jpg'
+import WoduCover from '../Images/DevPortfolioGallery/WoduCover.jpg'
 
 import Akolade1 from '../Images/PhotoPortfolioGallery/Akolade1.jpg'
 import Avatar1 from '../Images/PhotoPortfolioGallery/Avatar1.jpg'
@@ -31,19 +32,37 @@ import Viva3 from '../Images/PhotoPortfolioGallery/Viva3.jpg'
 
 
 
-// Shown above the project list on the Software work page.
-export const FeaturedProduct = {
-    title: "Tiler",
-    tagline: "AI-Powered Scheduling Assistant",
-    cover: `${TilerCover}`,
-    coverAlt: "Tiler's home page, showing a to-do list turned into a scheduled day",
-    description: [
-        "An intelligent scheduling assistant that transforms everyday to-dos into realistic, adaptive calendars. Tiler uses AI to understand tasks, account for priorities, deadlines, and travel time, and automatically adjust schedules as plans change.",
-        "As co-founder and CTO, I helped bring Tiler from concept to a working product, building intuitive user experiences, AI-powered features, and the engineering infrastructure to support them.",
-    ],
-    link: "https://tiler.app",
-    linkLabel: "Visit tiler.app",
-}
+// Shown above the project list on the Software work page, in this order.
+export const FeaturedProducts = [
+    {
+        id: "tiler",
+        title: "Tiler",
+        tagline: "AI-Powered Scheduling Assistant",
+        cover: `${TilerCover}`,
+        coverSize: [1240, 600],
+        coverAlt: "Tiler's home page, showing a to-do list turned into a scheduled day",
+        description: [
+            "An intelligent scheduling assistant that transforms everyday to-dos into realistic, adaptive calendars. Tiler uses AI to understand tasks, account for priorities, deadlines, and travel time, and automatically adjust schedules as plans change.",
+            "As co-founder and CTO, I helped bring Tiler from concept to a working product, building intuitive user experiences, AI-powered features, and the engineering infrastructure to support them.",
+        ],
+        link: "https://tiler.app",
+        linkLabel: "Visit tiler.app",
+    },
+    {
+        id: "wodu",
+        title: "Wọ́dù",
+        tagline: "A Daily Yorùbá Word Game",
+        cover: `${WoduCover}`,
+        coverSize: [866, 765],
+        coverAlt: "Wọ́dù's game board: a five-letter grid above a Yorùbá keyboard with tone-marked letters",
+        description: [
+            "A culturally inspired take on Wordle that makes learning and practicing Yorùbá fun, one word at a time. Wọ́dù reimagines the familiar word-guessing experience with a custom Yorùbá keyboard, tone-aware letter handling, and daily puzzles that celebrate the language.",
+            "I designed and built Wọ́dù from the ground up, tackling unique linguistic and technical challenges while creating an accessible, engaging experience that bridges technology, language, and culture.",
+        ],
+        link: "https://wodu.app",
+        linkLabel: "Play at wodu.app",
+    },
+]
 
 export const PortfolioData = [
     {

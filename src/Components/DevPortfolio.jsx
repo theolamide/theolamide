@@ -3,13 +3,13 @@ import LogoandHam from './LogoAndHam';
 import Footer from './footer';
 import styled from 'styled-components';
 
-import { PortfolioData, FeaturedProduct } from './PortfolioData.js'
+import { PortfolioData, FeaturedProducts } from './PortfolioData.js'
 
 const Featured = ({ product }) => (
-    <FeaturedWrapper aria-labelledby="featured-title">
+    <FeaturedWrapper aria-labelledby={`${product.id}-title`}>
         <FeaturedText>
             <Eyebrow>Featured product</Eyebrow>
-            <h2 id="featured-title">
+            <h2 id={`${product.id}-title`}>
                 {product.title}
                 <FeaturedTagline>{product.tagline}</FeaturedTagline>
             </h2>
@@ -19,7 +19,7 @@ const Featured = ({ product }) => (
             </FeaturedAction>
         </FeaturedText>
         <FeaturedCoverLink href={product.link} target="_blank" rel="noopener noreferrer" tabIndex="-1" aria-hidden="true">
-            <FeaturedCover src={product.cover} alt={product.coverAlt} width="1240" height="600" />
+            <FeaturedCover src={product.cover} alt={product.coverAlt} width={product.coverSize[0]} height={product.coverSize[1]} />
         </FeaturedCoverLink>
     </FeaturedWrapper>
 )
@@ -31,7 +31,7 @@ const DevPortfolio = (props) => {
             <LogoandHam drawerToggleClickHandler={props.drawerToggleClickHandler} />
 
             <MapWrapper>
-                <Featured product={FeaturedProduct} />
+                {FeaturedProducts.map(product => <Featured key={product.id} product={product} />)}
                 {PortfolioData.map(project => (
                     <div key={project.index}>
                         <ProjectWrapper>
@@ -216,8 +216,12 @@ const FeaturedCoverLink = styled.a`
     line-height: 0;
 `
 const FeaturedCover = styled.img`
-    width: 100%;
+    display: block;
+    max-width: 100%;
+    max-height: 26rem;
+    width: auto;
     height: auto;
+    margin: 0 auto;
     border-radius: 0.25rem;
 `
 
