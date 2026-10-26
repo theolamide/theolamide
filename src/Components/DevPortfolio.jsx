@@ -1,5 +1,5 @@
 import React from 'react';
-import LogoandHam from './LogoAndHam';
+import SiteHeader from './SiteHeader';
 import Footer from './footer';
 import styled from 'styled-components';
 
@@ -48,11 +48,11 @@ const Featured = ({ product }) => (
     </FeaturedWrapper>
 )
 
-const DevPortfolio = (props) => {
+const DevPortfolio = () => {
 
     return (
         <RootWrapper>
-            <LogoandHam drawerToggleClickHandler={props.drawerToggleClickHandler} />
+            <SiteHeader />
 
             <MapWrapper>
                 {FeaturedProducts.map(product => <Featured key={product.id} product={product} />)}

@@ -2,16 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import Footer from './footer';
 
-import LogoandHam from './LogoAndHam';
+import SiteHeader from './SiteHeader';
 import PhotoSilder from './PhotoSlider'
 
 
 
-const PhotoPortfolio = (props) => {
+const PhotoPortfolio = () => {
 
     return (
         <RootWrapper>
-            <LogoandHam drawerToggleClickHandler={props.drawerToggleClickHandler} />
+            <SiteHeader />
             <MainContent>
                 <PhotoSilder />
             </MainContent>

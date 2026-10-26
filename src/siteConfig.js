@@ -15,14 +15,16 @@ export const RESUME_URL = '/Daniel-Olamide-Ajadi-Resume.pdf';
 
 export const OG_IMAGE = `${SITE_URL}/OgThumbnail.JPG`;
 
+// Old paths that now live elsewhere. Each gets a small HTML page that sends
+// visitors and crawlers on to the new path.
+export const REDIRECTS = {
+    '/about': '/',
+};
+
 // Every route listed here is prerendered to static HTML at build time.
 export const PAGES = {
     '/': {
         title: `${SITE_NAME} | ${PERSON_NAME}`,
-        description: 'Olamide Ajadi is a software engineer with a background in mechanical engineering. Software projects, photography, and things built along the way.',
-    },
-    '/about': {
-        title: `About | ${PERSON_NAME}`,
         description: 'A builder at heart. An engineer by profession. How a mechanical engineer became a software engineer, how I think about building, and what I make beyond software.',
     },
     '/devportfolio': {
