@@ -27,7 +27,7 @@ export const PAGES = {
     },
     '/devportfolio': {
         title: `Development work | ${PERSON_NAME}`,
-        description: 'Selected software projects by Olamide Ajadi, with live links and source code where available.',
+        description: 'Selected software projects by Olamide Ajadi, including Tiler, an AI-powered scheduling assistant, with live links and source code where available.',
     },
     '/photoportfolio': {
         title: `Photography | ${PERSON_NAME}`,

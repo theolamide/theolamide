@@ -3,7 +3,26 @@ import LogoandHam from './LogoAndHam';
 import Footer from './footer';
 import styled from 'styled-components';
 
-import { PortfolioData } from './PortfolioData.js'
+import { PortfolioData, FeaturedProduct } from './PortfolioData.js'
+
+const Featured = ({ product }) => (
+    <FeaturedWrapper aria-labelledby="featured-title">
+        <FeaturedText>
+            <Eyebrow>Featured product</Eyebrow>
+            <h2 id="featured-title">
+                {product.title}
+                <FeaturedTagline>{product.tagline}</FeaturedTagline>
+            </h2>
+            {product.description.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+            <FeaturedAction href={product.link} target="_blank" rel="noopener noreferrer">
+                {product.linkLabel}
+            </FeaturedAction>
+        </FeaturedText>
+        <FeaturedCoverLink href={product.link} target="_blank" rel="noopener noreferrer" tabIndex="-1" aria-hidden="true">
+            <FeaturedCover src={product.cover} alt={product.coverAlt} width="1240" height="600" />
+        </FeaturedCoverLink>
+    </FeaturedWrapper>
+)
 
 const DevPortfolio = (props) => {
 
@@ -12,6 +31,7 @@ const DevPortfolio = (props) => {
             <LogoandHam drawerToggleClickHandler={props.drawerToggleClickHandler} />
 
             <MapWrapper>
+                <Featured product={FeaturedProduct} />
                 {PortfolioData.map(project => (
                     <div key={project.index}>
                         <ProjectWrapper>
@@ -110,6 +130,95 @@ const MapWrapper = styled.div`
             height: 76%;
             margin-bottom: 0.5rem;
         }
+`
+
+const FeaturedWrapper = styled.section`
+    /* Same outer width as the project cards below: 90% plus 1rem padding each side. */
+    margin: 1rem auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border: 2px solid #134818;
+    border-radius: 0.5rem;
+    background: #BCE5B9;
+
+    h2 {
+        margin: 0 0 1rem;
+        font-size: 2.25rem;
+        line-height: 1.15;
+        color: #134818;
+    }
+
+    p {
+        margin: 0 0 1rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #0E4416;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 1.25rem;
+    }
+`
+const FeaturedText = styled.div`
+    flex: 1 1 45%;
+`
+const Eyebrow = styled.p`
+    && {
+        margin: 0 0 0.25rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #134818;
+    }
+`
+const FeaturedTagline = styled.span`
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2F5F1C;
+`
+const FeaturedAction = styled.a`
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0 1.25rem;
+    border: 2px solid #134818;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #E0FCDE;
+    background: #134818;
+    transition: background-color 0.15s ease;
+
+    &:hover {
+        background: #0E4416;
+    }
+
+    &:focus-visible {
+        outline: 3px solid #134818;
+        outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+`
+const FeaturedCoverLink = styled.a`
+    flex: 1 1 55%;
+    display: block;
+    line-height: 0;
+`
+const FeaturedCover = styled.img`
+    width: 100%;
+    height: auto;
+    border-radius: 0.25rem;
 `
 
 const ProjectWrapper = styled.div`

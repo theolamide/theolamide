@@ -1,6 +1,7 @@
 import CainAfrica from '../Images/DevPortfolioGallery/CainAfrica.JPG';
 import TodoList from '../Images/DevPortfolioGallery/TodoList.JPG'
 import ShapesSVGCover from '../Images/DevPortfolioGallery/ShapesSVGCover.JPG'
+import TilerCover from '../Images/DevPortfolioGallery/TilerCover.jpg'
 
 import Akolade1 from '../Images/PhotoPortfolioGallery/Akolade1.jpg'
 import Avatar1 from '../Images/PhotoPortfolioGallery/Avatar1.jpg'
@@ -29,6 +30,20 @@ import Viva2 from '../Images/PhotoPortfolioGallery/Viva2.jpg'
 import Viva3 from '../Images/PhotoPortfolioGallery/Viva3.jpg'
 
 
+
+// Shown above the project list on the Software work page.
+export const FeaturedProduct = {
+    title: "Tiler",
+    tagline: "AI-Powered Scheduling Assistant",
+    cover: `${TilerCover}`,
+    coverAlt: "Tiler's home page, showing a to-do list turned into a scheduled day",
+    description: [
+        "An intelligent scheduling assistant that transforms everyday to-dos into realistic, adaptive calendars. Tiler uses AI to understand tasks, account for priorities, deadlines, and travel time, and automatically adjust schedules as plans change.",
+        "As co-founder and CTO, I helped bring Tiler from concept to a working product, building intuitive user experiences, AI-powered features, and the engineering infrastructure to support them.",
+    ],
+    link: "https://tiler.app",
+    linkLabel: "Visit tiler.app",
+}
 
 export const PortfolioData = [
     {
