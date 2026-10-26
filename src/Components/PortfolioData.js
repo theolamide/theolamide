@@ -45,6 +45,7 @@ export const FeaturedProducts = [
             "An intelligent scheduling assistant that transforms everyday to-dos into realistic, adaptive calendars. Tiler uses AI to understand tasks, account for priorities, deadlines, and travel time, and automatically adjust schedules as plans change.",
             "As co-founder and CTO, I helped bring Tiler from concept to a working product, building intuitive user experiences, AI-powered features, and the engineering infrastructure to support them.",
         ],
+        technologies: ["ReactJS", "TypeScript", "ASP.NET (C#)", "SQL Server", "OpenAI API", "Google Calendar API"],
         link: "https://tiler.app",
         linkLabel: "Visit tiler.app",
     },
