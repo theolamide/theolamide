@@ -33,6 +33,6 @@ export const PAGES = {
     },
     '/photoportfolio': {
         title: `Photography | ${PERSON_NAME}`,
-        description: 'Portrait, event, and product photography by Olamide Ajadi.',
+        description: 'Portrait, event, product, and home cooking photography by Olamide Ajadi.',
     },
 };
