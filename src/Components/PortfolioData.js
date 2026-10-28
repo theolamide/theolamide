@@ -1,6 +1,8 @@
 import CainAfrica from '../Images/DevPortfolioGallery/CainAfrica.JPG';
 import TodoList from '../Images/DevPortfolioGallery/TodoList.JPG'
 import ShapesSVGCover from '../Images/DevPortfolioGallery/ShapesSVGCover.JPG'
+import TilerCover from '../Images/DevPortfolioGallery/TilerCover.jpg'
+import WoduCover from '../Images/DevPortfolioGallery/WoduCover.jpg'
 
 import Akolade1 from '../Images/PhotoPortfolioGallery/Akolade1.jpg'
 import Avatar1 from '../Images/PhotoPortfolioGallery/Avatar1.jpg'
@@ -30,6 +32,38 @@ import Viva3 from '../Images/PhotoPortfolioGallery/Viva3.jpg'
 
 
 
+// Shown above the project list on the Software work page, in this order.
+export const FeaturedProducts = [
+    {
+        id: "tiler",
+        title: "Tiler",
+        tagline: "AI-Powered Scheduling Assistant",
+        cover: `${TilerCover}`,
+        coverSize: [1240, 600],
+        coverAlt: "Tiler's home page, showing a to-do list turned into a scheduled day",
+        description: [
+            "An intelligent scheduling assistant that transforms everyday to-dos into realistic, adaptive calendars. Tiler uses AI to understand tasks, account for priorities, deadlines, and travel time, and automatically adjust schedules as plans change.",
+            "As co-founder and CTO, I helped bring Tiler from concept to a working product, building intuitive user experiences, AI-powered features, and the engineering infrastructure to support them.",
+        ],
+        technologies: ["ReactJS", "TypeScript", "ASP.NET (C#)", "SQL Server", "OpenAI API", "Google Calendar API"],
+        link: "https://tiler.app",
+    },
+    {
+        id: "wodu",
+        title: "Wọ́dù",
+        tagline: "A Daily Yorùbá Word Game",
+        cover: `${WoduCover}`,
+        coverSize: [866, 765],
+        coverAlt: "Wọ́dù's game board: a five-letter grid above a Yorùbá keyboard with tone-marked letters",
+        description: [
+            "A culturally inspired take on Wordle that makes learning and practicing Yorùbá fun, one word at a time. Wọ́dù reimagines the familiar word-guessing experience with a custom Yorùbá keyboard, tone-aware letter handling, and daily puzzles that celebrate the language.",
+            "I designed and built Wọ́dù from the ground up, tackling unique linguistic and technical challenges while creating an accessible, engaging experience that bridges technology, language, and culture.",
+        ],
+        technologies: ["ReactJS", "Cloudflare Workers", "Django REST Framework", "PostgreSQL"],
+        link: "https://wodu.app",
+    },
+]
+
 export const PortfolioData = [
     {
         index: 1,    //These should be incremental from the last interger
@@ -37,8 +71,7 @@ export const PortfolioData = [
         cover: `${ShapesSVGCover}`,
         description: "Shapes is a little fun demonstration in the use of localstroge for populating, holding, retrieving, and mutating data as needed as well as data persistence. Along with that, it is also a study of input interaction while using their parameters to draw SVG shapes on a 'canvas'. It is styled with vanilla CSS and is fully responsive.",
         technologies: ["ReactJS", "Vanilla CSS", "LocalStorage", ],
-        link: "https://shapes-svg.theolamide.vercel.app/",
-        github: "https://github.com/theolamide/ShapesSVG"
+        link: "https://shapes-svg.theolamide.vercel.app/"
     },
     {
         index: 2,    //These should be incremental from the last interger
@@ -46,8 +79,7 @@ export const PortfolioData = [
         cover: `${TodoList}`,
         description: "Todo List, as the name implies, is a productivity web app that can be used to keep simple lists. This app is always in progress and future versions will have image attachment to individual list items, timers amongst other things.",
         technologies: ["ReactJS", "useReducer", "CSS"],
-        link: "https://reducer-todo.theolamide.now.sh/",
-        github: "https://github.com/theolamide/reducer-todo"
+        link: "https://reducer-todo.theolamide.now.sh/"
     },
     {
         index: 4,    //These should be incremental from the last interger
@@ -55,8 +87,7 @@ export const PortfolioData = [
         cover: `${CainAfrica}`,
         description: "A fully responsive informational website for a non profit focused on education and healthcare for the less priviledged in Africa. Website must haves included donations and forms handling, blogging capability, and gallery carousel. Paypal, and Paystack were used to handle collections of monnies, external API call was made to the organizations Medium page to display blog posts, and React Grid Library for image gallery. This website was single handedly built by me.",
         technologies: ["ReactJS", "axios", "react-grid-gallery", "styled-components"],
-        link: "https://www.cainafrica.org/#/",
-        github: "Private"
+        link: "https://www.cainafrica.org/#/"
     }
 ]
 

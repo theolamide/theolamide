@@ -14,7 +14,7 @@ const personJsonLd = () => JSON.stringify({
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: PERSON_NAME,
-    url: `${SITE_URL}/about`,
+    url: `${SITE_URL}/`,
     jobTitle: 'Software Engineer',
     sameAs: [LINKS.linkedin, LINKS.github],
 }).replace(/</g, '\\u003c');
@@ -27,7 +27,7 @@ export const headTags = (path) => {
         `<title>${escapeHtml(title)}</title>`,
         `<meta name="description" content="${escapeHtml(description)}" />`,
         `<link rel="canonical" href="${url}" />`,
-        `<meta property="og:type" content="${path === '/about' ? 'profile' : 'website'}" />`,
+        `<meta property="og:type" content="${path === '/' ? 'profile' : 'website'}" />`,
         `<meta property="og:site_name" content="${escapeHtml(SITE_NAME)}" />`,
         `<meta property="og:title" content="${escapeHtml(title)}" />`,
         `<meta property="og:description" content="${escapeHtml(description)}" />`,
@@ -38,10 +38,28 @@ export const headTags = (path) => {
         `<meta name="twitter:description" content="${escapeHtml(description)}" />`,
         `<meta name="twitter:image" content="${OG_IMAGE}" />`,
     ];
-    if (path === '/about') {
+    if (path === '/') {
         tags.push(`<script type="application/ld+json">${personJsonLd()}</script>`);
     }
     return tags.join('\n  ');
+};
+
+// A stand-in page for a moved path: crawlers follow the canonical link and
+// browsers the refresh.
+export const redirectPage = (to) => {
+    const url = canonicalUrl(to);
+    return `<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Moved</title>
+  <meta name="robots" content="noindex" />
+  <link rel="canonical" href="${url}" />
+  <meta http-equiv="refresh" content="0; url=${to}" />
+</head>
+<body><p>This page has moved to <a href="${to}">${url}</a>.</p></body>
+</html>
+`;
 };
 
 // Keeps the title and description in step during client-side navigation.

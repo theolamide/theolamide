@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
-import LogoandHam from './LogoAndHam';
+import SiteHeader from './SiteHeader';
 import Footer from './footer';
 
 import Profile from '../Images/About/Profile.jpg';
@@ -45,12 +45,12 @@ const sectionExtras = () => ({
     ),
 });
 
-const About = (props) => {
+const About = () => {
     const extras = sectionExtras();
 
     return (
         <RootWrapper>
-            <LogoandHam drawerToggleClickHandler={props.drawerToggleClickHandler} />
+            <SiteHeader />
             <Main>
                 <Hero aria-labelledby="about-title">
                     <HeroText>

@@ -1,54 +1,68 @@
 import React from 'react';
-import LogoandHam from './LogoAndHam';
+import SiteHeader from './SiteHeader';
 import Footer from './footer';
 import styled from 'styled-components';
 
-import { PortfolioData } from './PortfolioData.js'
+import { PortfolioData, FeaturedProducts } from './PortfolioData.js'
 
-const DevPortfolio = (props) => {
+// Tech stack, project link and code note: the same block on every project.
+const ProjectLinks = ({ project }) => (
+    <ButtonsWrapper>
+        <div className="tagbuttons">
+            <h3>Tech Stack: </h3>
+            <TagButtonDiv>
+                {project.technologies.map(tech => (
+                    <button className="tags" key={tech} style={{ margin: "0.25rem" }}>
+                        {tech}
+                    </button>
+                ))}
+            </TagButtonDiv>
+        </div>
+        <a href={project.link} target="_blank" rel="noopener noreferrer" style={{ margin: "auto" }} >
+            <button className="visit">
+                View Project
+            </button>
+        </a>
+        <p>
+            <strong>
+                Code view available on request
+            </strong>
+        </p>
+    </ButtonsWrapper>
+)
+
+const Featured = ({ product }) => (
+    <FeaturedWrapper aria-labelledby={`${product.id}-title`}>
+        <FeaturedText>
+            <Eyebrow>Featured product</Eyebrow>
+            <h2 id={`${product.id}-title`}>
+                {product.title}
+                <FeaturedTagline>{product.tagline}</FeaturedTagline>
+            </h2>
+            {product.description.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
+            <ProjectLinks project={product} />
+        </FeaturedText>
+        <FeaturedCoverLink href={product.link} target="_blank" rel="noopener noreferrer" tabIndex="-1" aria-hidden="true">
+            <FeaturedCover src={product.cover} alt={product.coverAlt} width={product.coverSize[0]} height={product.coverSize[1]} />
+        </FeaturedCoverLink>
+    </FeaturedWrapper>
+)
+
+const DevPortfolio = () => {
 
     return (
         <RootWrapper>
-            <LogoandHam drawerToggleClickHandler={props.drawerToggleClickHandler} />
+            <SiteHeader />
 
             <MapWrapper>
+                {FeaturedProducts.map(product => <Featured key={product.id} product={product} />)}
                 {PortfolioData.map(project => (
                     <div key={project.index}>
                         <ProjectWrapper>
                             <div className="mainContent">
                                 <h2>{project.title}</h2>
                                 <p>{project.description}</p>
-                                <ButtonsWrapper>
-                                    <div className="tagbuttons">
-                                        <h3>Tech Stack: </h3>
-                                        <TagButtonDiv>
-                                            {project.technologies.map(tech => (
-                                                <button className="tags" key={tech} style={{ margin: "0.25rem" }}>
-                                                    {tech}
-                                                </button>
-                                            ))}
-                                        </TagButtonDiv>
-                                    </div>
-                                    <a href={project.link} target="_blank" rel="noopener noreferrer" style={{ margin: "auto" }} >
-                                        <button className="visit">
-                                            View Project
-                                        </button>
-                                    </a>
-                                    {/* Render repository link conditionally depending on wether it is private/proprietary or not */}
-                                    {project.github === "Private" ?
-                                        <p>
-                                            <strong>
-                                                Private Repository
-                                            </strong>
-                                        </p> :
-                                        <a href={project.github} target="_blank" rel="noopener noreferrer" style={{ margin: "auto" }} >
-                                            <button className="visit">
-                                                View Code
-                                        </button>
-                                        </a>
-                                    }
-
-                                </ButtonsWrapper>
+                                <ProjectLinks project={project} />
                             </div>
 
                             <ProjectCover src={project.cover} alt="project cover photo" onClick={() => window.open(project.link, "_blank", "noopener,noreferrer")} />
@@ -112,6 +126,71 @@ const MapWrapper = styled.div`
         }
 `
 
+const FeaturedWrapper = styled.section`
+    /* Same outer width as the project cards below: 90% plus 1rem padding each side. */
+    margin: 1rem auto;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #BCE5B9;
+
+    h2 {
+        margin: 0 0 1rem;
+        font-size: 2.25rem;
+        line-height: 1.15;
+        color: #134818;
+    }
+
+    p {
+        margin: 0 0 1rem;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        color: #0E4416;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 1.25rem;
+    }
+`
+const FeaturedText = styled.div`
+    flex: 1 1 45%;
+`
+const Eyebrow = styled.p`
+    && {
+        margin: 0 0 0.25rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #134818;
+    }
+`
+const FeaturedTagline = styled.span`
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2F5F1C;
+`
+const FeaturedCoverLink = styled.a`
+    flex: 1 1 55%;
+    display: block;
+    line-height: 0;
+`
+const FeaturedCover = styled.img`
+    display: block;
+    max-width: 100%;
+    max-height: 26rem;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 0.25rem;
+`
+
 const ProjectWrapper = styled.div`
     margin: 1rem auto;
     width: 90%;
@@ -150,6 +229,7 @@ const ProjectCover = styled.img`
 const ButtonsWrapper = styled.div`
     width: 100%;
     display: flex;
+    gap: 0.75rem;
 
     p{
         margin: auto;      

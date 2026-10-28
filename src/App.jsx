@@ -1,9 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import styled from "styled-components";
-import { Route, Switch, useLocation } from "react-router-dom";
+import { Redirect, Route, Switch, useLocation } from "react-router-dom";
 
-import NavBar from './Components/NavBar';
-import Home from './Components/Home';
 import About from './Components/About';
 import DevPortfolio from './Components/DevPortfolio';
 import PhotoPortfolio from './Components/PhotoPortfolio';
@@ -18,7 +16,6 @@ import './App.css';
 // StaticRouter when prerendering (entry-server.jsx).
 function App() {
 
-  const [NavAppear, setNavAppear] = useState({ topDrawerOpen: false })
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -26,28 +23,18 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  let drawerToggleClickHandler = () => {
-    setNavAppear((prevState) => {
-      return { topDrawerOpen: !prevState.topDrawerOpen }
-    });
-  };
-
-  let closeBackDropClickHandler = () => {
-    setNavAppear({ topDrawerOpen: false })
-  }
-
 
   return (
       <SiteWrapper>
         <ParticlesJS />
 
         <SubWrapper>
-          <NavBar NavAppear={NavAppear} closeBackDropClickHandler={closeBackDropClickHandler} />
           <Switch>
-            <Route path='/about' render={(props) => <About drawerToggleClickHandler={drawerToggleClickHandler} />} />
-            <Route path='/devportfolio' render={(props) => <DevPortfolio drawerToggleClickHandler={drawerToggleClickHandler} />} />
-            <Route path='/photoportfolio' render={(props) => <PhotoPortfolio drawerToggleClickHandler={drawerToggleClickHandler} />} />
-            <Route path='/' render={(props) => <Home drawerToggleClickHandler={drawerToggleClickHandler} />} />
+            {/* The About page is the home page; /about is kept for old links. */}
+            <Redirect from='/about' to='/' />
+            <Route path='/devportfolio' component={DevPortfolio} />
+            <Route path='/photoportfolio' component={PhotoPortfolio} />
+            <Route path='/' component={About} />
           </Switch>
 
         </SubWrapper>

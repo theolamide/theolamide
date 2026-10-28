@@ -15,7 +15,7 @@ if (!HEAD.test(template) || !template.includes(ROOT)) {
   throw new Error('index.html is missing the head markers or the empty #root element');
 }
 
-const { render, headTags, PAGES } = await import(pathToFileURL(path.join(ssrDir, 'entry-server.js')).href);
+const { render, headTags, redirectPage, PAGES, REDIRECTS } = await import(pathToFileURL(path.join(ssrDir, 'entry-server.js')).href);
 
 for (const route of Object.keys(PAGES)) {
   const { html, styles } = render(route);
@@ -28,6 +28,13 @@ for (const route of Object.keys(PAGES)) {
   fs.mkdirSync(path.dirname(out), { recursive: true });
   fs.writeFileSync(out, page);
   console.log(`prerendered ${route} -> ${path.relative(root, out)}`);
+}
+
+for (const [from, to] of Object.entries(REDIRECTS)) {
+  const out = path.join(dist, from.slice(1), 'index.html');
+  fs.mkdirSync(path.dirname(out), { recursive: true });
+  fs.writeFileSync(out, redirectPage(to));
+  console.log(`redirect ${from} -> ${to} (${path.relative(root, out)})`);
 }
 
 fs.rmSync(ssrDir, { recursive: true, force: true });
