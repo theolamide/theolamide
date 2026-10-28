@@ -19,6 +19,7 @@ it('links to existing work and contact profiles only', () => {
   const hrefs = [...container.querySelectorAll('a')].map(a => a.getAttribute('href'));
   expect(hrefs).toContain('/devportfolio');
   expect(hrefs).toContain('/photoportfolio');
+  expect(hrefs).toContain('/photoportfolio#cooking');
   expect(hrefs).toContain('https://www.linkedin.com/in/daniel-olamide-ajadi');
   expect(hrefs).toContain('https://github.com/theolamide');
 });

@@ -4,14 +4,16 @@ import ShapesSVGCover from '../Images/DevPortfolioGallery/ShapesSVGCover.JPG'
 import TilerCover from '../Images/DevPortfolioGallery/TilerCover.jpg'
 import WoduCover from '../Images/DevPortfolioGallery/WoduCover.jpg'
 
-// Full-size photos and their 200px-tall thumbnails, looked up by file name.
-const photoFiles = import.meta.glob('../Images/PhotoPortfolioGallery/*.jpg', { eager: true, import: 'default' })
-const thumbFiles = import.meta.glob('../Images/PhotoPortfolioGallery/thumbs/*.jpg', { eager: true, import: 'default' })
-const photo = (name, caption) => ({
-    src: photoFiles[`../Images/PhotoPortfolioGallery/${name}.jpg`],
-    thumb: thumbFiles[`../Images/PhotoPortfolioGallery/thumbs/${name}.jpg`],
+// Full-size photos and their 200px-tall thumbnails, looked up by folder and file name.
+const photoFiles = import.meta.glob('../Images/{PhotoPortfolioGallery,CookingGallery}/*.jpg', { eager: true, import: 'default' })
+const thumbFiles = import.meta.glob('../Images/{PhotoPortfolioGallery,CookingGallery}/thumbs/*.jpg', { eager: true, import: 'default' })
+const galleryPhoto = (folder) => (name, caption) => ({
+    src: photoFiles[`../Images/${folder}/${name}.jpg`],
+    thumb: thumbFiles[`../Images/${folder}/thumbs/${name}.jpg`],
     caption,
 })
+const photo = galleryPhoto('PhotoPortfolioGallery')
+const dish = galleryPhoto('CookingGallery')
 
 
 
@@ -101,4 +103,26 @@ export const PhotoRoll = [
     photo('Billy1', "Melanin Overload"),
     photo('GP1', "Pre-Wedding: Pelumi and Gabe"),
     photo('DIC2', "Hair Sisters")
+]
+
+
+// Home cooking, from Instagram @lami.madeit, in this order.
+export const CookingRoll = [
+    dish('jollof-lamb-chop', "Jollof rice with lamb chop"),
+    dish('lamb-shank-polenta', "Braised lamb shank on polenta"),
+    dish('suya-wings', "Suya wings, potatoes and dodo"),
+    dish('asaro-mackerel', "Àsáró with fried mackerel"),
+    dish('egusi', "Ẹ̀gúsí"),
+    dish('salmon-salad', "Pan-seared salmon and salad"),
+    dish('roast-chicken', "Roast chicken"),
+    dish('gnocchi-chicken', "Gnocchi in almond cream with chicken"),
+    dish('pasta-chicken', "Creamy pasta with chicken"),
+    dish('chicken-ramen', "Chicken ramen"),
+    dish('deconstructed-lasagna', "Deconstructed lasagna"),
+    dish('stuffed-shells', "Stuffed shell pasta"),
+    dish('sunday-lunch', "Sunday lunch spread"),
+    dish('june-dinner-table', "Peppersoup, rice, beans and dodo"),
+    dish('strawberry-toast', "Strawberry toast"),
+    dish('french-toast-breakfast', "French toast, bacon and eggs"),
+    dish('bagel-breakfast', "Bagel, eggs, bacon and avocado")
 ]

@@ -49,10 +49,10 @@ export const about = {
     ],
     // Shown under "Beyond software". Add photos or links here as projects are documented.
     making: [
-        { name: 'Photography', link: '/photoportfolio', linkLabel: 'See the gallery' },
+        { name: 'Photography', link: '/photoportfolio', linkLabel: 'See the portraits' },
         { name: '3D modeling' },
         { name: 'Woodworking' },
-        { name: 'Home cooking' },
+        { name: 'Home cooking', link: '/photoportfolio#cooking', linkLabel: 'See the food' },
         { name: 'Yorùbá language and culture' },
     ],
 };

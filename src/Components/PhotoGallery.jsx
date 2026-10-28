@@ -103,9 +103,9 @@ const Stage = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Leave room for the header, caption, thumbnails and footer. */
-    height: clamp(18rem, calc(100vh - 19.5rem), 52rem);
-    height: clamp(18rem, calc(100svh - 19.5rem), 52rem);
+    /* Leave room for the header, title, collection switch, caption and thumbnails. */
+    height: clamp(18rem, calc(100vh - 22.5rem), 52rem);
+    height: clamp(18rem, calc(100svh - 22.5rem), 52rem);
     padding: 0.75rem;
     box-sizing: border-box;
     border-radius: 0.5rem;
@@ -115,7 +115,7 @@ const Stage = styled.div`
 
     @media (max-width: 414px) {
         padding: 0.5rem;
-        height: clamp(18rem, calc(100svh - 16rem), 40rem);
+        height: clamp(18rem, calc(100svh - 19rem), 40rem);
     }
 `
 const StagePhoto = styled.img`
