@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import Footer from './footer';
 
 import SiteHeader from './SiteHeader';
-import PhotoSilder from './PhotoSlider'
-
+import PhotoGallery from './PhotoGallery';
+import { PhotoRoll } from './PortfolioData.js';
 
 
 const PhotoPortfolio = () => {
@@ -12,9 +12,10 @@ const PhotoPortfolio = () => {
     return (
         <RootWrapper>
             <SiteHeader />
-            <MainContent>
-                <PhotoSilder />
-            </MainContent>
+            <Main>
+                <Title>Photography</Title>
+                <PhotoGallery photos={PhotoRoll} label="Portraits and product shoots" />
+            </Main>
             <Footer />
         </RootWrapper>
     )
@@ -23,36 +24,30 @@ const PhotoPortfolio = () => {
 export default PhotoPortfolio;
 
 const RootWrapper = styled.div`
-    height: 96%;
+    min-height: 100%;
+    padding-bottom: 2rem;
 `
-const MainContent = styled.div`
-    margin: auto;
-    margin-top: 1rem;
-    width: 95%;
-    height: 75.5vh;
-    display: flex;
-    justify-content: space-between;
-    // border: 1px solid black;
-    overflow: scroll;
-        &::-webkit-scrollbar
-            {
-                width: 6px;
-                height: 0px;
-                background-color: #BCE5B9;
-            } 
-        &::-webkit-scrollbar-thumb
-            {
-                background-color: #134818;
-            }
+const Main = styled.main`
+    width: 90%;
+    max-width: 60rem;
+    margin: 1.5rem auto 0;
+    /* Opaque, so the floating particles never sit behind the photos or captions. */
+    background: #E0FCDE;
 
-        @media (max-width: 768px) {
-            width: 95%;
-            height: 87%;
-        }
+    @media (max-width: 414px) {
+        width: calc(100% - 2rem);
+        margin-top: 1rem;
+    }
+`
+const Title = styled.h1`
+    margin: 0 0 1rem;
+    text-align: left;
+    font-size: 2.25rem;
+    line-height: 1.1;
+    color: #2F5F1C;
 
-        @media (max-width: 414px) {
-            flex-direction: column;
-            height: 75%;
-            // margin-bottom: 1.5rem;
-        }
+    @media (max-width: 414px) {
+        font-size: 1.85rem;
+        margin-bottom: 0.75rem;
+    }
 `
